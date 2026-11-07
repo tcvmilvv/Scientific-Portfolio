@@ -3,7 +3,7 @@
 window.PERFIL = {
   "nome": "Camila Assis Tavares",
   "nomeCitacao": "C. A. Tavares",
-  "resumo": "Química computacional: simulação molecular, campos de força e problemas inversos.",
+  "resumo": "PhD Researcher in Computational Chemistry | Molecular Dynamics | Coarse-Grained Simulations | Biomolecular Systems | Open to Postdoctoral Research | Art Enthusiast",
   "links": [
     {
       "rotulo": "Currículo Lattes",

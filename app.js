@@ -34,9 +34,26 @@
 
   // ---------------- Cabeçalho ----------------
 
+  function iniciais(nome) {
+    var partes = (nome || "").trim().split(/\s+/);
+    if (!partes.length) return "";
+    var primeira = partes[0].charAt(0);
+    var ultima = partes.length > 1 ? partes[partes.length - 1].charAt(0) : "";
+    return (primeira + ultima).toUpperCase();
+  }
+
   function montaCabecalho() {
     document.getElementById("nome").textContent = PERFIL.nome || "";
-    document.getElementById("resumo").textContent = PERFIL.resumo || "";
+    document.getElementById("marca").textContent = iniciais(PERFIL.nome);
+
+    var resumoEl = document.getElementById("resumo");
+    (PERFIL.resumo || "")
+      .split("|")
+      .map(function (t) { return t.trim(); })
+      .filter(Boolean)
+      .forEach(function (trecho) {
+        resumoEl.appendChild(el("li", { texto: trecho }));
+      });
 
     var anos = ARTIGOS.map(function (a) { return a.ano; });
     var min = Math.min.apply(null, anos), max = Math.max.apply(null, anos);
@@ -48,21 +65,6 @@
     (PERFIL.links || []).forEach(function (l, i) {
       if (i > 0) linksEl.appendChild(document.createTextNode("  ·  "));
       linksEl.appendChild(el("a", { href: l.url, target: "_blank", rel: "noopener", texto: l.rotulo }));
-    });
-
-    var bancada = document.getElementById("bancada");
-    var comCapa = ARTIGOS.filter(function (a) { return a.capa; });
-    comCapa.forEach(function (a) {
-      var item = el("div", { class: "capa-item" }, [
-        el("img", {
-          src: a.capa,
-          alt: "Capa da revista " + a.revista + ", edição que trouxe o artigo “" + a.titulo + "”",
-          loading: "eager",
-          width: a.capa_dim ? a.capa_dim[0] : "",
-          height: a.capa_dim ? a.capa_dim[1] : "",
-        }),
-      ]);
-      bancada.appendChild(item);
     });
   }
 

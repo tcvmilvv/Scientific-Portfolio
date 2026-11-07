@@ -1,21 +1,22 @@
 /* ---------------------------------------------------------------
    Portfólio de artigos — Camila Assis Tavares
    Conceito: mesa de redação de revista científica + linha do tempo.
-   A "bancada" no topo apoia as capas como itens físicos; a "régua"
-   lateral é a linha do tempo por ano que organiza a lista abaixo.
+   Paleta azul/amarelo; a "régua" lateral é a linha do tempo por ano
+   que organiza a lista abaixo. O cabeçalho reserva um espaço para
+   um logotipo próprio (ver #marca em index.html).
 ----------------------------------------------------------------*/
 
 :root{
-  --papel: #f1efe8;
-  --papel-alt: #e8e4d8;
-  --tinta: #221f1a;
-  --tinta-suave: #5a5649;
-  --linha: #d8d2c0;
-  --violeta: #4b2e83;
-  --violeta-escuro: #342061;
-  --ouro: #7a5a17;
-  --ouro-claro: #f5c969;
-  --branco: #fffdf7;
+  --papel: #efede1;
+  --papel-alt: #e2ddc9;
+  --tinta: #1c2430;
+  --tinta-suave: #5c6472;
+  --linha: #d2cdb4;
+  --azul: #083d77;
+  --azul-escuro: #052c57;
+  --ouro: #78611d;
+  --ouro-claro: #f4d35e;
+  --branco: #fffdf6;
 
   --serif: "Newsreader", Georgia, "Times New Roman", serif;
   --sans: "Archivo", "Helvetica Neue", Arial, sans-serif;
@@ -26,29 +27,29 @@
 
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --papel: #1a1813;
-    --papel-alt: #221f19;
-    --tinta: #efe9db;
-    --tinta-suave: #b4ac97;
-    --linha: #3a362b;
-    --violeta: #a992e0;
-    --violeta-escuro: #8872c9;
+    --papel: #11161d;
+    --papel-alt: #171d26;
+    --tinta: #e9e5d4;
+    --tinta-suave: #99a1ac;
+    --linha: #28303c;
+    --azul: #6fa3dd;
+    --azul-escuro: #0a4078;
     --ouro: #e3b64f;
-    --ouro-claro: #f3cd79;
-    --branco: #100e0b;
+    --ouro-claro: #f4d35e;
+    --branco: #141a22;
   }
 }
 :root[data-theme="dark"]{
-  --papel: #1a1813;
-  --papel-alt: #221f19;
-  --tinta: #efe9db;
-  --tinta-suave: #b4ac97;
-  --linha: #3a362b;
-  --violeta: #a992e0;
-  --violeta-escuro: #8872c9;
+  --papel: #11161d;
+  --papel-alt: #171d26;
+  --tinta: #e9e5d4;
+  --tinta-suave: #99a1ac;
+  --linha: #28303c;
+  --azul: #6fa3dd;
+  --azul-escuro: #0a4078;
   --ouro: #e3b64f;
-  --ouro-claro: #f3cd79;
-  --branco: #100e0b;
+  --ouro-claro: #f4d35e;
+  --branco: #141a22;
 }
 
 *{ box-sizing: border-box; }
@@ -69,96 +70,106 @@ body{
 ::selection{ background: var(--ouro-claro); color: var(--tinta); }
 
 a{ color: inherit; }
-:focus-visible{ outline: 2px solid var(--violeta); outline-offset: 3px; }
+:focus-visible{ outline: 2px solid var(--azul); outline-offset: 3px; }
 
 .pular{
   position: absolute; left: -999px; top: 0;
-  background: var(--violeta); color: var(--branco);
+  background: var(--azul); color: #fff;
   padding: 0.7em 1.2em; z-index: 100; font-family: var(--sans);
 }
 .pular:focus{ left: 1rem; top: 1rem; }
 
-/* ---------------- Cabeçalho / bancada ---------------- */
+/* ---------------- Cabeçalho ---------------- */
 
 .topo{
   position: relative;
-  background: linear-gradient(180deg, var(--violeta-escuro) 0%, var(--violeta) 100%);
-  color: var(--branco);
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  align-items: center;
-  gap: 2rem;
-  padding: 4.5rem clamp(1.5rem, 5vw, 4rem) 5rem;
+  background: linear-gradient(155deg, var(--azul-escuro) 0%, var(--azul) 100%);
+  color: #fff;
+  padding: 3.4rem clamp(1.5rem, 5vw, 4rem) 3.2rem;
   overflow: hidden;
 }
-.topo::after{
-  /* textura discreta de linhas, como grade milimetrada de laboratório */
+.topo::before{
+  /* padrão de grafo molecular discreto — nós e ligações, em amarelo translúcido */
   content: "";
   position: absolute; inset: 0;
-  background-image: repeating-linear-gradient(90deg, rgba(255,255,255,0.045) 0 1px, transparent 1px 64px);
+  opacity: 0.16;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220' viewBox='0 0 220 220'%3E%3Cg fill='none' stroke='%23F4D35E' stroke-width='1.3'%3E%3Cpath d='M18 40 L70 18 L132 46 L170 14'/%3E%3Cpath d='M70 18 L86 92'/%3E%3Cpath d='M132 46 L150 120 L206 100'/%3E%3Cpath d='M86 92 L40 150 L18 206'/%3E%3Cpath d='M86 92 L150 120'/%3E%3Cpath d='M40 150 L104 182 L150 120'/%3E%3C/g%3E%3Cg fill='%23F4D35E'%3E%3Ccircle cx='18' cy='40' r='3'/%3E%3Ccircle cx='70' cy='18' r='3'/%3E%3Ccircle cx='132' cy='46' r='3'/%3E%3Ccircle cx='170' cy='14' r='3'/%3E%3Ccircle cx='86' cy='92' r='3.4'/%3E%3Ccircle cx='150' cy='120' r='3'/%3E%3Ccircle cx='206' cy='100' r='3'/%3E%3Ccircle cx='40' cy='150' r='3'/%3E%3Ccircle cx='18' cy='206' r='3'/%3E%3Ccircle cx='104' cy='182' r='3'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 220px 220px;
   pointer-events: none;
 }
 
-.topo-texto{ position: relative; z-index: 1; max-width: 46ch; }
+.topo-interno{
+  position: relative; z-index: 1;
+  max-width: var(--max); margin: 0 auto;
+  display: flex; align-items: flex-start; gap: 1.6rem;
+}
+
+/* espaço reservado para um logotipo próprio — troque o conteúdo de
+   #marca em index.html por <img src="..."> quando tiver o logo */
+.marca{
+  flex: none;
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(244,211,94,0.55);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--serif); font-size: 1.15rem; font-weight: 500;
+  color: var(--ouro-claro);
+  letter-spacing: 0.02em;
+  margin-top: 0.3rem;
+}
+
+.topo-texto{ min-width: 0; flex: 1; }
 
 #nome{
   font-family: var(--serif);
   font-weight: 500;
-  font-size: clamp(2.3rem, 4.5vw, 3.6rem);
+  white-space: nowrap;
+  font-size: clamp(1.5rem, 6.1vw, 3.5rem);
   line-height: 1.05;
-  margin: 0 0 0.6rem;
+  margin: 0 0 0.75rem;
   letter-spacing: -0.01em;
 }
 
 .resumo{
-  font-size: 1.1rem;
+  margin: 0 0 1.5rem;
+  padding: 0;
+  list-style: none;
+  display: flex; flex-wrap: wrap;
+  row-gap: 0.4rem;
+  font-size: 0.98rem;
   line-height: 1.5;
-  color: rgba(255,255,255,0.88);
-  margin: 0 0 1.4rem;
-  max-width: 38ch;
+  color: rgba(255,255,255,0.9);
+  max-width: 64ch;
+}
+.resumo li{ display: flex; align-items: center; }
+.resumo li + li::before{
+  content: "";
+  display: inline-block;
+  width: 1px; height: 0.9em;
+  background: rgba(244,211,94,0.5);
+  margin: 0 0.65em;
 }
 
 .numeros{
   font-size: 0.92rem;
   color: var(--ouro-claro);
-  margin: 0 0 1.6rem;
+  margin: 0 0 1.4rem;
   font-variant-numeric: tabular-nums;
 }
 
 .links{ margin: 0; font-size: 0.95rem; }
 .links a{
-  color: var(--branco);
+  color: #fff;
   text-decoration-color: rgba(255,255,255,0.5);
   text-underline-offset: 3px;
 }
 .links a:hover{ text-decoration-color: var(--ouro-claro); }
 
-/* bancada: as duas capas apoiadas como objetos físicos */
-.bancada{
-  position: relative;
-  z-index: 1;
-  height: clamp(220px, 32vw, 340px);
-}
-.bancada .capa-item{
-  position: absolute;
-  width: clamp(130px, 15vw, 180px);
-  border-radius: 2px;
-  box-shadow: 0 18px 40px -12px rgba(0,0,0,0.55), 0 2px 6px rgba(0,0,0,0.3);
-  border: 1px solid rgba(255,255,255,0.15);
-}
-.bancada .capa-item img{ display: block; width: 100%; height: auto; border-radius: 2px; }
-.bancada .capa-item:nth-of-type(1){ left: 6%; top: 8%; transform: rotate(-6deg); }
-.bancada .capa-item:nth-of-type(2){ left: 42%; top: 20%; transform: rotate(4deg); z-index: 1; }
-.bancada .capa-etiqueta{
-  position: absolute; bottom: -1.6rem; left: 0; right: 0;
-  font-size: 0.72rem; text-align: center; color: rgba(255,255,255,0.65);
-  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-}
-
-@media (max-width: 760px){
-  .topo{ grid-template-columns: 1fr; padding-top: 3rem; padding-bottom: 3rem; }
-  .bancada{ height: 200px; margin-top: 1rem; }
-  .bancada .capa-item{ width: 120px; }
+@media (max-width: 560px){
+  .topo{ padding-top: 2.6rem; padding-bottom: 2.6rem; }
+  .marca{ width: 44px; height: 44px; font-size: 0.95rem; }
+  #nome{ font-size: clamp(1.25rem, 7.8vw, 2.2rem); }
 }
 
 /* ---------------- Corpo: régua + lista ---------------- */
@@ -211,9 +222,9 @@ a{ color: inherit; }
   background: var(--papel); border: 1.5px solid var(--linha);
   margin-top: 2px;
 }
-.regua button:hover{ color: var(--violeta); }
-.regua li.ativo button{ color: var(--violeta); font-size: 0.92rem; }
-.regua li.ativo button::before{ background: var(--violeta); border-color: var(--violeta); }
+.regua button:hover{ color: var(--azul); }
+.regua li.ativo button{ color: var(--azul); font-size: 0.92rem; }
+.regua li.ativo button::before{ background: var(--azul); border-color: var(--azul); }
 
 @media (max-width: 900px){
   .pagina{ grid-template-columns: 1fr; }
@@ -249,9 +260,9 @@ main{ min-width: 0; padding: 0 clamp(1.5rem, 4vw, 3rem) 6rem; }
   border-radius: 999px; padding: 0.4rem 0.9rem;
   transition: border-color 0.15s, color 0.15s, background 0.15s;
 }
-.chip:hover{ border-color: var(--violeta); color: var(--violeta); }
+.chip:hover{ border-color: var(--azul); color: var(--azul); }
 .chip[aria-pressed="true"]{
-  background: var(--violeta); border-color: var(--violeta); color: var(--branco);
+  background: var(--azul); border-color: var(--azul); color: #fff;
 }
 
 .busca{ margin-left: auto; display: flex; flex-direction: column; gap: 0.3rem; min-width: 220px; flex: 1 1 240px; }
@@ -261,7 +272,7 @@ main{ min-width: 0; padding: 0 clamp(1.5rem, 4vw, 3rem) 6rem; }
   padding: 0.5rem 0.7rem; border: 1px solid var(--linha); border-radius: var(--radius);
   background: var(--branco); color: var(--tinta);
 }
-.busca input:focus{ border-color: var(--violeta); }
+.busca input:focus{ border-color: var(--azul); }
 
 .contagem{
   width: 100%; margin: 0; font-size: 0.8rem; color: var(--tinta-suave);
@@ -277,7 +288,7 @@ main{ min-width: 0; padding: 0 clamp(1.5rem, 4vw, 3rem) 6rem; }
   display: flex; align-items: baseline; gap: 1rem;
   font-family: var(--serif); font-weight: 400;
   font-size: clamp(2rem, 4vw, 2.8rem);
-  color: var(--violeta);
+  color: var(--azul);
   margin: 0 0 1.6rem;
 }
 .ano-titulo small{
@@ -339,10 +350,10 @@ main{ min-width: 0; padding: 0 clamp(1.5rem, 4vw, 3rem) 6rem; }
   margin-top: 0.7rem;
 }
 .artigo-doi{
-  font-size: 0.82rem; color: var(--violeta);
-  text-decoration-color: rgba(75,46,131,0.35); text-underline-offset: 3px;
+  font-size: 0.82rem; color: var(--azul);
+  text-decoration-color: rgba(8,61,119,0.35); text-underline-offset: 3px;
 }
-.artigo-doi:hover{ text-decoration-color: var(--violeta); }
+.artigo-doi:hover{ text-decoration-color: var(--azul); }
 
 .artigo-tema{
   font-size: 0.74rem; color: var(--tinta-suave);

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Camila Assis Tavares — Artigos publicados</title>
   <meta name="description" content="Artigos publicados em química computacional: simulação molecular, campos de força e problemas inversos.">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%234B2E83'/%3E%3Cpath d='M9 22 16 10l7 12' fill='none' stroke='%23fff' stroke-width='2'/%3E%3Ccircle cx='9' cy='22' r='3.2' fill='%23fff'/%3E%3Ccircle cx='16' cy='10' r='3.2' fill='%23F5C969'/%3E%3Ccircle cx='23' cy='22' r='3.2' fill='%23fff'/%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23083D77'/%3E%3Cpath d='M9 22 16 10l7 12' fill='none' stroke='%23fff' stroke-width='2'/%3E%3Ccircle cx='9' cy='22' r='3.2' fill='%23fff'/%3E%3Ccircle cx='16' cy='10' r='3.2' fill='%23F4D35E'/%3E%3Ccircle cx='23' cy='22' r='3.2' fill='%23fff'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&display=swap" rel="stylesheet">
@@ -15,13 +15,17 @@
   <a class="pular" href="#lista">Ir para os artigos</a>
 
   <header class="topo">
-    <div class="topo-texto">
-      <h1 id="nome"></h1>
-      <p class="resumo" id="resumo"></p>
-      <p class="numeros" id="numeros"></p>
-      <p class="links" id="links"></p>
+    <div class="topo-interno">
+      <!-- Espaço reservado para o logotipo. Quando tiver o seu, troque
+           o conteúdo abaixo por: <img src="logo.svg" alt="Camila Assis Tavares" width="56" height="56"> -->
+      <div class="marca" id="marca" aria-hidden="true"></div>
+      <div class="topo-texto">
+        <h1 id="nome"></h1>
+        <ul class="resumo" id="resumo"></ul>
+        <p class="numeros" id="numeros"></p>
+        <p class="links" id="links"></p>
+      </div>
     </div>
-    <div class="bancada" id="bancada" aria-label="Artigos que foram capa da edição"></div>
   </header>
 
   <div class="pagina">
