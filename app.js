@@ -8,7 +8,7 @@
   });
 
   var NOME_AUTORA = PERFIL.nomeCitacao || "";
-  var estado = { tema: "Todos", busca: "" };
+  var estado = { tema: "All", busca: "" };
 
   function el(tag, attrs, filhos) {
     var n = document.createElement(tag);
@@ -59,7 +59,7 @@
     var min = Math.min.apply(null, anos), max = Math.max.apply(null, anos);
     var revistas = new Set(ARTIGOS.map(function (a) { return a.revista; })).size;
     document.getElementById("numeros").textContent =
-      ARTIGOS.length + " artigos publicados · " + revistas + " periódicos · " + min + "–" + max;
+      ARTIGOS.length + " published articles · " + revistas + " journals · " + min + "–" + max;
 
     var linksEl = document.getElementById("links");
     (PERFIL.links || []).forEach(function (l, i) {
@@ -114,7 +114,7 @@
 
   function montaChips() {
     var cont = document.getElementById("chips");
-    var todos = el("button", { class: "chip", type: "button", "aria-pressed": "true", "data-tema": "Todos", texto: "Todos" });
+    var todos = el("button", { class: "chip", type: "button", "aria-pressed": "true", "data-tema": "All", texto: "All" });
     cont.appendChild(todos);
     temas().forEach(function (t) {
       cont.appendChild(el("button", { class: "chip", type: "button", "aria-pressed": "false", "data-tema": t, texto: t }));
@@ -144,7 +144,7 @@
 
   function filtrados() {
     return ARTIGOS.filter(function (a) {
-      if (estado.tema !== "Todos" && a.tema !== estado.tema) return false;
+      if (estado.tema !== "All" && a.tema !== estado.tema) return false;
       if (!estado.busca) return true;
       var alvo = (a.titulo + " " + a.revista + " " + a.autores.join(" ")).toLowerCase();
       return alvo.indexOf(estado.busca) !== -1;
@@ -157,7 +157,7 @@
     var capaFilho = a.capa
       ? el("img", {
           src: a.capa,
-          alt: "Capa da revista " + a.revista + (a.capa_destaque ? " (" + a.capa_destaque + ")" : ""),
+          alt: "Cover of " + a.revista + (a.capa_destaque ? " (" + a.capa_destaque + ")" : ""),
           loading: "lazy",
           width: a.capa_dim ? a.capa_dim[0] : "",
           height: a.capa_dim ? a.capa_dim[1] : "",
@@ -188,11 +188,11 @@
 
     document.getElementById("contagem").textContent =
       lista.length === ARTIGOS.length
-        ? ARTIGOS.length + " artigos"
-        : lista.length + " de " + ARTIGOS.length + " artigos";
+        ? ARTIGOS.length + " articles"
+        : lista.length + " of " + ARTIGOS.length + " articles";
 
     if (!lista.length) {
-      raiz.appendChild(el("p", { class: "vazio", texto: "Nenhum artigo encontrado para essa busca." }));
+      raiz.appendChild(el("p", { class: "vazio", texto: "No articles match this search." }));
       return;
     }
 
@@ -207,7 +207,7 @@
         var grupo = el("section", { class: "grupo-ano", id: "ano-" + ano, "data-ano": ano }, [
           el("h2", { class: "ano-titulo" }, [
             document.createTextNode(ano),
-            el("small", { texto: porAno[ano].length + (porAno[ano].length === 1 ? " artigo" : " artigos") }),
+            el("small", { texto: porAno[ano].length + (porAno[ano].length === 1 ? " article" : " articles") }),
           ]),
         ]);
         porAno[ano].forEach(function (a) { grupo.appendChild(cartaoArtigo(a)); });
@@ -221,7 +221,7 @@
 
   function montaRodape() {
     document.getElementById("rodape").textContent =
-      "Atualizado em " + (PERFIL.atualizado || "—") + " · dados a partir do currículo Lattes.";
+      "Updated " + (PERFIL.atualizado || "—") + " · data sourced from the Lattes CV.";
   }
 
   // ---------------- Início ----------------

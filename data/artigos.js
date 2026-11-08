@@ -1,16 +1,16 @@
-// Edite este arquivo para atualizar o portfólio.
-// Para trocar uma capa: salve a imagem em capas/ e preencha "capa" (e "capa_dim" com [largura, altura]).
+// Edit this file to update the portfolio.
+// To add a cover: save the image in capas/ and fill in "capa" (and "capa_dim" with [width, height]).
 window.PERFIL = {
   "nome": "Camila Assis Tavares",
   "nomeCitacao": "C. A. Tavares",
-  "resumo": "PhD Researcher in Computational Chemistry  Open to Postdoctoral Research | Art Enthusiast",
+  "resumo": "PhD Researcher in Computational Chemistry | Molecular Dynamics | Coarse-Grained Simulations | Biomolecular Systems | Open to Postdoctoral Research | Art Enthusiast",
   "links": [
     {
-      "rotulo": "Currículo Lattes",
+      "rotulo": "Lattes CV",
       "url": "http://lattes.cnpq.br/1933195871728569"
     }
   ],
-  "atualizado": "outubro de 2026"
+  "atualizado": "November 2026"
 };
 
 window.ARTIGOS = [
@@ -27,10 +27,10 @@ window.ARTIGOS = [
     ],
     "doi": "10.1016/j.cam.2026.117560",
     "meta": "art. 117560",
-    "tema": "Problemas inversos",
-    "capa": null,
+    "tema": "Inverse problems",
+    "capa": "capas/jcam-2026-v494.jpg",
     "capa_destaque": false,
-    "capa_dim": null
+    "capa_dim": [900, 1228]
   },
   {
     "id": "10-1021-acsphyschemau-5c00113",
@@ -44,14 +44,11 @@ window.ARTIGOS = [
       "L. Martínez"
     ],
     "doi": "10.1021/acsphyschemau.5c00113",
-    "meta": "vol. 6, n. 4",
-    "tema": "Vírus e membranas",
+    "meta": "vol. 6, no. 4",
+    "tema": "Viruses & membranes",
     "capa": "capas/acs-phys-chem-au-2026-v6n4.jpg",
-    "capa_destaque": "Capa da edição · julho/agosto de 2026",
-    "capa_dim": [
-      900,
-      1197
-    ]
+    "capa_destaque": "Featured cover · July/August 2026",
+    "capa_dim": [900, 1197]
   },
   {
     "id": "10-3390-biophysica5010004",
@@ -66,8 +63,8 @@ window.ARTIGOS = [
       "T. C. Ramalho"
     ],
     "doi": "10.3390/biophysica5010004",
-    "meta": "vol. 5, n. 1, art. 4",
-    "tema": "Dinâmica molecular",
+    "meta": "vol. 5, no. 1, art. 4",
+    "tema": "Molecular dynamics",
     "capa": null,
     "capa_destaque": false,
     "capa_dim": null
@@ -85,11 +82,11 @@ window.ARTIGOS = [
       "T. C. Ramalho"
     ],
     "doi": "10.3390/molecules29153684",
-    "meta": "vol. 29, n. 15, art. 3684",
-    "tema": "Dinâmica molecular",
-    "capa": null,
+    "meta": "vol. 29, no. 15, art. 3684",
+    "tema": "Molecular dynamics",
+    "capa": "capas/molecules-2024-v29n15.jpg",
     "capa_destaque": false,
-    "capa_dim": null
+    "capa_dim": [900, 1292]
   },
   {
     "id": "10-2174-0113895575250433231103063707",
@@ -105,10 +102,10 @@ window.ARTIGOS = [
     ],
     "doi": "10.2174/0113895575250433231103063707",
     "meta": "vol. 24",
-    "tema": "Dinâmica molecular",
-    "capa": null,
+    "tema": "Molecular dynamics",
+    "capa": "capas/mini-reviews-med-chem.jpg",
     "capa_destaque": false,
-    "capa_dim": null
+    "capa_dim": [900, 1164]
   },
   {
     "id": "10-1007-s00894-023-05530-7",
@@ -123,8 +120,8 @@ window.ARTIGOS = [
       "T. C. Ramalho"
     ],
     "doi": "10.1007/s00894-023-05530-7",
-    "meta": "vol. 29, n. 4, art. 123",
-    "tema": "Campos de força",
+    "meta": "vol. 29, no. 4, art. 123",
+    "tema": "Force fields",
     "capa": null,
     "capa_destaque": false,
     "capa_dim": null
@@ -142,14 +139,11 @@ window.ARTIGOS = [
       "T. C. Ramalho"
     ],
     "doi": "10.3390/magnetochemistry9040089",
-    "meta": "vol. 9, n. 4, art. 89",
-    "tema": "RMN e espectroscopia",
+    "meta": "vol. 9, no. 4, art. 89",
+    "tema": "NMR & spectroscopy",
     "capa": "capas/magnetochemistry-2023-v9n4.jpg",
-    "capa_destaque": "Capa da edição · abril de 2023",
-    "capa_dim": [
-      900,
-      1277
-    ]
+    "capa_destaque": "Featured cover · April 2023",
+    "capa_dim": [900, 1277]
   },
   {
     "id": "10-3390-ph16121653",
@@ -164,11 +158,11 @@ window.ARTIGOS = [
       "T. C. Ramalho"
     ],
     "doi": "10.3390/ph16121653",
-    "meta": "vol. 16, n. 12, art. 1653",
-    "tema": "RMN e espectroscopia",
-    "capa": null,
+    "meta": "vol. 16, no. 12, art. 1653",
+    "tema": "NMR & spectroscopy",
+    "capa": "capas/pharmaceuticals-2023-v16n12.jpg",
     "capa_destaque": false,
-    "capa_dim": null
+    "capa_dim": [900, 1277]
   },
   {
     "id": "10-1021-acs-jpcb-2c07147",
@@ -182,11 +176,11 @@ window.ARTIGOS = [
       "T. C. Ramalho"
     ],
     "doi": "10.1021/acs.jpcb.2c07147",
-    "meta": "vol. 127, n. 2, p. 495–504",
-    "tema": "Campos de força",
-    "capa": null,
+    "meta": "vol. 127, no. 2, pp. 495–504",
+    "tema": "Force fields",
+    "capa": "capas/jpcb-2023-v127n2.jpg",
     "capa_destaque": false,
-    "capa_dim": null
+    "capa_dim": [900, 1195]
   },
   {
     "id": "10-1016-j-jmgm-2023-108511",
@@ -201,7 +195,7 @@ window.ARTIGOS = [
     ],
     "doi": "10.1016/j.jmgm.2023.108511",
     "meta": "vol. 122, art. 108511",
-    "tema": "Campos de força",
+    "tema": "Force fields",
     "capa": null,
     "capa_destaque": false,
     "capa_dim": null
@@ -221,7 +215,7 @@ window.ARTIGOS = [
     ],
     "doi": "10.1002/cem.3507",
     "meta": "art. e3507",
-    "tema": "Problemas inversos",
+    "tema": "Inverse problems",
     "capa": null,
     "capa_destaque": false,
     "capa_dim": null
@@ -238,11 +232,11 @@ window.ARTIGOS = [
       "T. C. Ramalho"
     ],
     "doi": "10.1080/07391102.2023.2250453",
-    "meta": "publicado online",
-    "tema": "Campos de força",
-    "capa": null,
+    "meta": "published online",
+    "tema": "Force fields",
+    "capa": "capas/jbsd-2024-v42n17.jpg",
     "capa_destaque": false,
-    "capa_dim": null
+    "capa_dim": [900, 1172]
   },
   {
     "id": "10-2174-1389557521666210521113155",
@@ -258,11 +252,11 @@ window.ARTIGOS = [
       "T. C. Ramalho"
     ],
     "doi": "10.2174/1389557521666210521113155",
-    "meta": "vol. 22, n. 6, p. 865–872",
-    "tema": "Química medicinal",
-    "capa": null,
+    "meta": "vol. 22, no. 6, pp. 865–872",
+    "tema": "Medicinal chemistry",
+    "capa": "capas/mini-reviews-med-chem.jpg",
     "capa_destaque": false,
-    "capa_dim": null
+    "capa_dim": [900, 1164]
   },
   {
     "id": "10-1080-17415977-2020-1732957",
@@ -277,11 +271,11 @@ window.ARTIGOS = [
       "J. P. Braga"
     ],
     "doi": "10.1080/17415977.2020.1732957",
-    "meta": "vol. 28, n. 11, p. 1513–1527",
-    "tema": "Problemas inversos",
-    "capa": null,
+    "meta": "vol. 28, no. 11, pp. 1513–1527",
+    "tema": "Inverse problems",
+    "capa": "capas/ipse-2020-v28n11.jpg",
     "capa_destaque": false,
-    "capa_dim": null
+    "capa_dim": [900, 1283]
   },
   {
     "id": "10-1016-j-cam-2020-112984",
@@ -298,7 +292,7 @@ window.ARTIGOS = [
     ],
     "doi": "10.1016/j.cam.2020.112984",
     "meta": "vol. 381, art. 112984",
-    "tema": "Problemas inversos",
+    "tema": "Inverse problems",
     "capa": null,
     "capa_destaque": false,
     "capa_dim": null

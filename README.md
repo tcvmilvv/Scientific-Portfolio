@@ -1,30 +1,38 @@
-# Portfólio de artigos — como publicar e editar
+# Articles portfolio — how to publish and edit
 
-## Publicar no GitHub Pages
+## Publish on GitHub Pages
 
-1. Crie um repositório novo no GitHub (ex.: `portfolio-artigos`).
-2. Suba todos os arquivos desta pasta (`index.html`, `style.css`, `app.js`, `data/`, `capas/`) para a raiz do repositório.
-3. No repositório, vá em **Settings → Pages**, em "Source" escolha a branch `main` e a pasta `/ (root)`, salve.
-4. Em alguns minutos o site estará em `https://seuusuario.github.io/portfolio-artigos/`.
+1. Create a new repository on GitHub (e.g. `portfolio-articles`).
+2. Push all the files in this folder (`index.html`, `style.css`, `app.js`, `data/`, `capas/`) to the root of the repository.
+3. In the repository, go to **Settings → Pages**, under "Source" pick the `main` branch and the `/ (root)` folder, then save.
+4. Within a few minutes the site will be live at `https://yourusername.github.io/portfolio-articles/`.
 
-## Editar os artigos
+## Editing the articles
 
-Todos os dados ficam em **`data/artigos.js`** — não é preciso mexer no HTML, CSS ou JS para atualizar a lista.
+All the data lives in **`data/artigos.js`** — you don't need to touch the HTML, CSS or JS to update the list.
 
-- **Adicionar um artigo novo**: copie um bloco `{ ... }` dentro de `window.ARTIGOS`, troque os valores e adicione uma vírgula entre os blocos.
-- **Adicionar uma capa**: salve a imagem em `capas/` (recomendo até 900px de largura, formato `.jpg`), preencha `"capa": "capas/nome-do-arquivo.jpg"` e `"capa_dim": [largura, altura]` do artigo correspondente. Se o artigo foi a capa da edição, preencha também `"capa_destaque"` com o texto do selo (ex.: `"Capa da edição · maio de 2027"`); se não, deixe `false`.
-- **Tema/área**: o campo `"tema"` alimenta os filtros no topo da lista. Pode reutilizar um tema existente ou criar um novo.
-- **Autores**: a lista em `"autores"` aceita qualquer nome; o seu nome (definido em `PERFIL.nomeCitacao`, no topo do arquivo) aparece em negrito automaticamente.
+- **Add a new article**: copy one of the `{ ... }` blocks inside `window.ARTIGOS`, change the values, and keep a comma between blocks.
+- **Add a cover**: save the image in `capas/` (up to ~900px wide, `.jpg` is fine), fill in `"capa": "capas/your-file-name.jpg"` and `"capa_dim": [width, height]` for that article. If the article was the issue's actual featured cover, also fill `"capa_destaque"` with the badge text (e.g. `"Featured cover · May 2027"`); otherwise leave it `false`.
+- **Topic**: the `"tema"` field drives the filter chips above the list. Reuse an existing topic or create a new one.
+- **Authors**: the `"autores"` list accepts any name; your own name (set in `PERFIL.nomeCitacao`, at the top of the file) is bolded automatically.
 
-Depois de editar, é só subir o arquivo atualizado para o GitHub — o site publicado atualiza sozinho.
+After editing, just push the updated file to GitHub — the published site updates on its own.
 
-## Estrutura
+## Known gaps
+
+A few covers could not be matched with confidence from the files you sent and were left out on purpose:
+
+- **Journal of Molecular Modeling** (the 2023 force-field paper): the cover you sent is from Volume 19 (2013) — that's a different issue than the one your article appeared in (vol. 29, no. 4). It wasn't used, to avoid showing the wrong date.
+- **Journal of Molecular Graphics & Modelling**, **Journal of Chemometrics**, **Biophysica**, and the 2020 **Journal of Computational and Applied Mathematics** paper: no cover was supplied for these.
+- The two **Mini-Reviews in Medicinal Chemistry** articles (2022 and 2024) share the same cover image, because Bentham uses one generic, non-issue-specific template for the whole journal rather than per-issue artwork.
+
+## Structure
 
 ```
-index.html   → estrutura da página
-style.css    → todo o visual (cores, tipografia, layout)
-app.js       → monta a página a partir de data/artigos.js
+index.html   → page structure
+style.css    → all the visual design (colors, type, layout)
+app.js       → builds the page from data/artigos.js
 data/
-  artigos.js → seus dados: perfil + lista de artigos (o único arquivo que você deve editar no dia a dia)
-capas/       → imagens das capas de revista
+  artigos.js → your data: profile + article list (the only file you should edit day to day)
+capas/       → journal cover images
 ```

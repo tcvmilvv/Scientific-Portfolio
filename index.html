@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Camila Assis Tavares — Artigos publicados</title>
-  <meta name="description" content="Artigos publicados em química computacional: simulação molecular, campos de força e problemas inversos.">
+  <title>Camila Assis Tavares — Published Articles</title>
+  <meta name="description" content="Published articles in computational chemistry: molecular dynamics, force fields and inverse problems.">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23083D77'/%3E%3Cpath d='M9 22 16 10l7 12' fill='none' stroke='%23fff' stroke-width='2'/%3E%3Ccircle cx='9' cy='22' r='3.2' fill='%23fff'/%3E%3Ccircle cx='16' cy='10' r='3.2' fill='%23F4D35E'/%3E%3Ccircle cx='23' cy='22' r='3.2' fill='%23fff'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,12 +12,12 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <a class="pular" href="#lista">Ir para os artigos</a>
+  <a class="pular" href="#lista">Skip to articles</a>
 
   <header class="topo">
     <div class="topo-interno">
-      <!-- Espaço reservado para o logotipo. Quando tiver o seu, troque
-           o conteúdo abaixo por: <img src="logo.svg" alt="Camila Assis Tavares" width="56" height="56"> -->
+      <!-- Placeholder for a logo. Once you have your own, replace the
+           line below with: <img src="logo.svg" alt="Camila Assis Tavares" width="56" height="56"> -->
       <div class="marca" id="marca" aria-hidden="true"></div>
       <div class="topo-texto">
         <h1 id="nome"></h1>
@@ -29,15 +29,15 @@
   </header>
 
   <div class="pagina">
-    <nav class="regua" aria-label="Linha do tempo">
+    <nav class="regua" aria-label="Timeline">
       <ol id="regua"></ol>
     </nav>
 
     <main>
-      <section class="controles" aria-label="Filtros">
-        <div class="chips" id="chips" role="group" aria-label="Filtrar por tema"></div>
+      <section class="controles" aria-label="Filters">
+        <div class="chips" id="chips" role="group" aria-label="Filter by topic"></div>
         <label class="busca">
-          <span>Buscar por título, revista ou coautor</span>
+          <span>Search by title, journal or co-author</span>
           <input type="search" id="busca" autocomplete="off">
         </label>
         <p class="contagem" id="contagem" role="status" aria-live="polite"></p>
