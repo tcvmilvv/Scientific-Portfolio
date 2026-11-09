@@ -8,6 +8,10 @@ window.PERFIL = {
     {
       "rotulo": "Lattes",
       "url": "http://lattes.cnpq.br/1933195871728569"
+    },
+    {
+       "rotulo": "ORCID",
+       "url": "https://orcid.org/0000-0002-0710-3956"
     }
   ],
   "atualizado": "November 2026"
