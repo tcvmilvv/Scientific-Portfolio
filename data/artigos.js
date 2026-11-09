@@ -50,6 +50,13 @@ window.ILUSTRACOES = [
     "altura": 706
   },
   {
+    "titulo": "Zika virus — blueprint poster",
+    "descricao": "Blueprint-style summary of the SIRAH-force-field Zika virus model: particle size, lipid composition and envelope-protein domains.",
+    "imagem": "ilustracoes/zika-blueprint-poster.jpg",
+    "largura": 1400,
+    "altura": 1863
+  },
+  {
     "titulo": "Labeled virion cross-section",
     "descricao": "Graphical abstract identifying the ionic solvation shells, E–M protein complex and lipid bilayer in a coarse-grained enveloped-virus model.",
     "imagem": "ilustracoes/virus-cutaway-labeled.png",
@@ -57,12 +64,12 @@ window.ILUSTRACOES = [
     "altura": 1094
   },
   {
-    "titulo": "Zika virus — blueprint poster",
-    "descricao": "Blueprint-style summary of the SIRAH-force-field Zika virus model: particle size, lipid composition and envelope-protein domains.",
-    "imagem": "ilustracoes/zika-blueprint-poster.jpg",
-    "largura": 1400,
-    "altura": 1863
-  }
+    "titulo": "Labeled virion cross-section",
+    "descricao": "Hierarchical states for the disassembly process of a flavivirus",
+    "imagem": "ilustracoes/disassembly.png",
+    "largura": 1546,
+    "altura": 492
+  },
 ];
 
 window.ARTIGOS = [
