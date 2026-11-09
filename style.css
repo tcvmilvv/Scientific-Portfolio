@@ -21,6 +21,7 @@
 
   --max: 1180px;
   --radius: 2px;
+  --pad-x: clamp(1.5rem, 5vw, 4rem);
   --nome-tam: clamp(1.5rem, 5.2vw, 3.6rem);
   --nome-linha: 1.12;
 }
@@ -83,7 +84,7 @@ a{ color: inherit; }
 .topo{
   position: relative;
   padding: clamp(3rem, 7vw, 5.5rem)
-           clamp(1.5rem, 5vw, 4rem)
+           var(--pad-x)
            clamp(2.5rem, 5vw, 3.5rem);
 }
 
@@ -186,7 +187,7 @@ a{ color: inherit; }
 #menu-secoes{
   max-width: var(--max);
   margin: 0 auto;
-  padding: 0 clamp(1.5rem, 5vw, 4rem);
+  padding: 0 var(--pad-x);
   list-style: none;
   display: flex;
   justify-content: center;
@@ -214,7 +215,7 @@ a{ color: inherit; }
   margin: 0 auto;
 }
 
-main{ min-width: 0; padding: 0 clamp(1.5rem, 4vw, 3rem) 6rem; }
+main{ min-width: 0; padding: 0 var(--pad-x) 6rem; }
 
 /* ---------------- Sections ---------------- */
 
@@ -245,6 +246,9 @@ main{ min-width: 0; padding: 0 clamp(1.5rem, 4vw, 3rem) 6rem; }
   color: var(--tinta-suave);
   max-width: 68ch;
   margin: 0;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
 }
 
 @media (max-width: 700px){
@@ -499,7 +503,7 @@ main{ min-width: 0; padding: 0 clamp(1.5rem, 4vw, 3rem) 6rem; }
 
 .rodape{
   border-top: 1px solid var(--linha);
-  padding: 2rem clamp(1.5rem, 4vw, 3rem);
+  padding: 2rem var(--pad-x);
   text-align: center;
   font-size: 0.8rem; color: var(--tinta-suave);
 }
