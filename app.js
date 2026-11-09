@@ -221,7 +221,7 @@
 
   function montaRodape() {
     document.getElementById("rodape").textContent =
-      "Updated " + (PERFIL.atualizado || "—") + " · data sourced from the Lattes CV.";
+      "Updated " + (PERFIL.atualizado || "—") + ";
   }
 
   // ---------------- Início ----------------
