@@ -21,6 +21,8 @@
 
   --max: 1180px;
   --radius: 2px;
+  --nome-tam: clamp(1.5rem, 5.2vw, 3.6rem);
+  --nome-linha: 1.12;
 }
 
 @media (prefers-color-scheme: dark){
@@ -92,11 +94,13 @@ a{ color: inherit; }
 .topo-cabeca{
   display: grid;
   grid-template-columns: auto 1fr;
-  align-items: stretch;
+  align-items: start;
   column-gap: clamp(1rem, 3vw, 2rem);
 }
 
 .marca{
+  /* Exactly as tall as the two-line "Hello! I'm <name>" heading. */
+  height: calc(var(--nome-tam) * var(--nome-linha) * 2);
   width: auto;
   aspect-ratio: 931 / 973;
   flex: none;
@@ -117,8 +121,8 @@ a{ color: inherit; }
 #nome{
   font-family: var(--display);
   font-weight: 400;
-  font-size: clamp(1.5rem, 5.2vw, 3.6rem);
-  line-height: 1.12;
+  font-size: var(--nome-tam);
+  line-height: var(--nome-linha);
   letter-spacing: -0.01em;
   margin: 0;
   color: var(--tinta-suave);
@@ -164,10 +168,10 @@ a{ color: inherit; }
 }
 
 @media (max-width: 560px){
+  :root{ --nome-tam: clamp(1rem, 6.8vw, 2.1rem); }
   .topo{ padding-top: 2.6rem; padding-bottom: 2.2rem; }
   .topo-cabeca{ grid-template-columns: 1fr; row-gap: 0.85rem; align-items: start; }
-  .marca{ width: 40px; aspect-ratio: 931 / 973; }
-  #nome{ font-size: clamp(1rem, 6.8vw, 2.1rem); }
+  .marca{ height: auto; width: 40px; }
 }
 
 /* ---------------- Section nav (top bar) ---------------- */
@@ -186,6 +190,7 @@ a{ color: inherit; }
   padding: 0 clamp(1.5rem, 5vw, 4rem);
   list-style: none;
   display: flex;
+  justify-content: center;
   gap: 1.8rem;
   overflow-x: auto;
 }

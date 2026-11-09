@@ -6,8 +6,8 @@ window.PERFIL = {
   "saudacao": "Hello!",
   "introducao": "I'm",
   "bio": "I am a computational chemist and postdoctoral researcher at UNICAMP, Brazil, specializing in molecular dynamics, computational biophysics, and biomolecular modeling. My research focuses on molecular interactions in complex biological systems, combining computational methods, scientific programming, and data visualization.",
-  "resumo": "PhD Researcher in Computational Chemistry · Molecular Dynamics · Coarse-Grained Simulations · Biomolecular Systems", 
-  "resumo": "Open to Postdoctoral Research",
+  "resumo": "PhD Researcher in Computational Chemistry · Molecular Dynamics · Coarse-Grained Simulations · Biomolecular Systems",
+  "situacao": "Open to Postdoctoral Research",
   "links": [
     {
       "rotulo": "Lattes",

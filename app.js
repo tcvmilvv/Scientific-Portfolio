@@ -52,9 +52,11 @@
       .map(function (t) { return t.trim(); })
       .filter(Boolean)
       .forEach(function (trecho) {
-        var destaque = trecho.toLowerCase() === "open to postdoctoral research";
-        resumoEl.appendChild(el("li", { class: destaque ? "resumo-destaque" : "", texto: trecho }));
+        resumoEl.appendChild(el("li", { texto: trecho }));
       });
+    if (PERFIL.situacao) {
+      resumoEl.appendChild(el("li", { class: "resumo-destaque", texto: PERFIL.situacao }));
+    }
 
     var anos = ARTIGOS.map(function (a) { return a.ano; });
     var min = Math.min.apply(null, anos), max = Math.max.apply(null, anos);
