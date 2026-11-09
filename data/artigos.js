@@ -6,8 +6,8 @@ window.PERFIL = {
   "saudacao": "Hello!",
   "introducao": "I'm",
   "bio": "I am a computational chemist and postdoctoral researcher at UNICAMP, Brazil, specializing in molecular dynamics, computational biophysics, and biomolecular modeling. My research focuses on molecular interactions in complex biological systems, combining computational methods, scientific programming, and data visualization.",
-  "resumo": "PhD Researcher in Computational Chemistry · Molecular Dynamics · Coarse-Grained Simulations · Biomolecular Systems",
-  "situacao": "Open to Postdoctoral Research Position",
+  "resumo": "PhD Researcher in Computational Chemistry",
+  "situacao": "Open to Postdoctoral Research Positions",
   "links": [
     {
       "rotulo": "Lattes",
@@ -44,7 +44,7 @@ window.PERFIL = {
 window.ILUSTRACOES = [
   {
     "titulo": "Zika virion membrane architecture",
-    "descricao": "Cutaway of the coarse-grained Zika virion envelope, from the full particle down to the lipid bilayer and the radial density profile of head, glycerol and tail beads.",
+    "descricao": "Cutaway of the coarse-grained Zika virion envelope, from the full particle down to the lipid bilayer and the coordination number profile of head, glycerol and tail beads.",
     "imagem": "ilustracoes/virus-membrane-zoom.png",
     "largura": 1838,
     "altura": 706
