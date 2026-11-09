@@ -1,4 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" aria-hidden="true">
-  <rect width="256" height="256" rx="48" fill="#0A66C2"/>
-  <path d="M94 110h-32v96h32v-96zM78 98c11 0 18-7 18-16 0-9-7-16-18-16s-18 7-18 16c0 9 7 16 18 16zM184 108c-17 0-26 9-30 16v-14h-32v96h32v-53c0-14 9-22 20-22 11 0 18 7 18 21v54h32v-60c0-27-15-38-40-38z" fill="#fff"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 256 256"
+   aria-hidden="true"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="icon-linkedin.svg"
+   inkscape:version="1.4.4 (1:1.4.4+202605061432+dcaf3e7d9e)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:zoom="0.80859375"
+     inkscape:cx="-109.44928"
+     inkscape:cy="95.227053"
+     inkscape:current-layer="svg1" />
+  <path
+     id="rect1"
+     d="M 48 0 C 21.408 0 2.9709568e-16 21.408 0 48 L 0 208 C 0 234.592 21.408 256 48 256 L 208 256 C 234.592 256 256 234.592 256 208 L 256 48 C 256 21.408 234.592 2.9709568e-16 208 0 L 48 0 z M 78 66 C 89 66 96 73 96 82 C 96 91 89 98 78 98 C 67 98 60 91 60 82 C 60 73 67 66 78 66 z M 184 108 C 209 108 224 119 224 146 L 224 206 L 192 206 L 192 152 C 192 138 185 131 174 131 C 163 131 154 139 154 153 L 154 206 L 122 206 L 122 110 L 154 110 L 154 124 C 158 117 167 108 184 108 z M 62 110 L 94 110 L 94 206 L 62 206 L 62 110 z "
+     style="fill:#e52b50;fill-opacity:1" />
 </svg>
