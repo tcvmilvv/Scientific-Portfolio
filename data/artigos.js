@@ -3,7 +3,8 @@
 window.PERFIL = {
   "nome": "Camila Assis Tavares",
   "nomeCitacao": "C. A. Tavares",
-  "saudacao": "Hello! I'm",
+  "saudacao": "Hello!",
+  "introducao": "I'm",
   "bio": "I am a computational chemist and postdoctoral researcher at UNICAMP, Brazil, specializing in molecular dynamics, computational biophysics, and biomolecular modeling. My research focuses on molecular interactions in complex biological systems, combining computational methods, scientific programming, and data visualization.",
   "resumo": "PhD Researcher in Computational Chemistry · Molecular Dynamics · Coarse-Grained Simulations · Biomolecular Systems · Open to Postdoctoral Research",
   "links": [

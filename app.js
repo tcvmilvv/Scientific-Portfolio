@@ -38,7 +38,11 @@
     var nomeEl = document.getElementById("nome");
     nomeEl.innerHTML = "";
     if (PERFIL.saudacao) {
-      nomeEl.appendChild(document.createTextNode(PERFIL.saudacao + " "));
+      nomeEl.appendChild(document.createTextNode(PERFIL.saudacao));
+      nomeEl.appendChild(el("br", {}));
+    }
+    if (PERFIL.introducao) {
+      nomeEl.appendChild(document.createTextNode(PERFIL.introducao + " "));
     }
     nomeEl.appendChild(el("span", { class: "nome-destaque", texto: PERFIL.nome || "" }));
 

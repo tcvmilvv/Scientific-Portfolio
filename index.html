@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Camila Assis Tavares — Published Articles</title>
   <meta name="description" content="Published articles in computational chemistry: molecular dynamics, force fields and inverse problems.">
-  <link rel="icon" type="image/png" href="logo/logo-black.svg">
+  <link rel="icon" type="image/png" href="logo/logo-black.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@400;700&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&display=swap" rel="stylesheet">
@@ -18,17 +18,13 @@
     <div class="topo-interno">
       <div class="topo-cabeca">
         <div class="marca" aria-hidden="true">
-          <img class="marca-clara" src="logo/logo-black.svg" alt="" width="52" height="52">
-          <img class="marca-escura" src="logo/logo-white.svg" alt="" width="52" height="52">
+          <img class="marca-clara" src="logo/logo-black.png" alt="" width="52" height="52">
+          <img class="marca-escura" src="logo/logo-white.png" alt="" width="52" height="52">
         </div>
         <h1 id="nome"></h1>
       </div>
       <div class="topo-acento" aria-hidden="true"></div>
       <ul class="resumo" id="resumo"></ul>
-      <div class="topo-rodape">
-        <p class="numeros" id="numeros"></p>
-        <p class="links" id="links"></p>
-      </div>
     </div>
   </header>
 
@@ -43,27 +39,37 @@
 
     <main>
       <section class="secao secao-sobre" id="sobre">
-        <h2 class="secao-titulo">About me</h2>
-        <p class="bio" id="bio"></p>
+        <div class="sobre-grid">
+          <h2 class="secao-titulo">About me</h2>
+          <div class="sobre-corpo">
+            <p class="bio" id="bio"></p>
+            <p class="links" id="links"></p>
+          </div>
+        </div>
       </section>
 
       <section class="secao secao-publicacoes" id="publicacoes">
         <h2 class="secao-titulo">Publications</h2>
+        <p class="numeros" id="numeros"></p>
 
-        <nav class="regua" aria-label="Jump to year">
-          <ol id="regua"></ol>
-        </nav>
+        <div class="publicacoes-corpo">
+          <nav class="regua" aria-label="Jump to year">
+            <ol id="regua"></ol>
+          </nav>
 
-        <div class="controles" aria-label="Filters">
-          <div class="chips" id="chips" role="group" aria-label="Filter by topic"></div>
-          <label class="busca">
-            <span>Search by title, journal or co-author</span>
-            <input type="search" id="busca" autocomplete="off">
-          </label>
-          <p class="contagem" id="contagem" role="status" aria-live="polite"></p>
+          <div class="publicacoes-conteudo">
+            <div class="controles" aria-label="Filters">
+              <div class="chips" id="chips" role="group" aria-label="Filter by topic"></div>
+              <label class="busca">
+                <span>Search by title, journal or co-author</span>
+                <input type="search" id="busca" autocomplete="off">
+              </label>
+              <p class="contagem" id="contagem" role="status" aria-live="polite"></p>
+            </div>
+
+            <div id="lista"></div>
+          </div>
         </div>
-
-        <div id="lista"></div>
       </section>
 
       <section class="secao secao-contato" id="contato">
