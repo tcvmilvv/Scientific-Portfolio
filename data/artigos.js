@@ -3,10 +3,10 @@
 window.PERFIL = {
   "nome": "Camila Assis Tavares",
   "nomeCitacao": "C. A. Tavares",
-  "resumo": "PhD Researcher in Computational Chemistry | Molecular Dynamics | Coarse-Grained Simulations | Biomolecular Systems | Open to Postdoctoral Research | Art Enthusiast",
+  "resumo": "PhD Researcher in Computational Chemistry · Molecular Dynamics · Coarse-Grained Simulations · Biomolecular Systems · Open to Postdoctoral Research",
   "links": [
     {
-      "rotulo": "Lattes CV",
+      "rotulo": "Lattes",
       "url": "http://lattes.cnpq.br/1933195871728569"
     }
   ],
