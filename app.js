@@ -221,7 +221,7 @@
 
   function montaRodape() {
     document.getElementById("rodape").textContent =
-      "Updated " + (PERFIL.atualizado || "—") + ";
+      "Updated " + (PERFIL.atualizado || "—");
   }
 
   // ---------------- Início ----------------
