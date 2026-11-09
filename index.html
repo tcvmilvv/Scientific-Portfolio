@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Camila Assis Tavares — Published Articles</title>
   <meta name="description" content="Published articles in computational chemistry: molecular dynamics, force fields and inverse problems.">
-  <link rel="icon" type="image/png" href="logo/logo-black.png">
+  <link rel="icon" type="image/svg+xml" href="logo/logo-black.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@400;700&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&display=swap" rel="stylesheet">
@@ -26,8 +26,8 @@
     <div class="topo-interno">
       <div class="topo-cabeca">
         <div class="marca" aria-hidden="true">
-          <img class="marca-clara" src="logo/logo-black.png" alt="">
-          <img class="marca-escura" src="logo/logo-white.png" alt="">
+          <img class="marca-clara" src="logo/logo-black.svg" alt="">
+          <img class="marca-escura" src="logo/logo-white.svg" alt="">
         </div>
         <h1 id="nome"></h1>
       </div>
@@ -39,8 +39,10 @@
   <div class="pagina">
     <main>
       <section class="secao secao-sobre" id="sobre">
-        <div class="sobre-grid">
-          <h2 class="secao-titulo">About me</h2>
+        <div class="secao-grid">
+          <div class="secao-lateral">
+            <h2 class="secao-titulo">About me</h2>
+          </div>
           <div class="sobre-corpo">
             <p class="bio" id="bio"></p>
             <p class="links" id="links"></p>
@@ -49,13 +51,14 @@
       </section>
 
       <section class="secao secao-publicacoes" id="publicacoes">
-        <h2 class="secao-titulo">Publications</h2>
-        <p class="numeros" id="numeros"></p>
-
-        <div class="publicacoes-corpo">
-          <nav class="regua" aria-label="Jump to year">
-            <ol id="regua"></ol>
-          </nav>
+        <div class="secao-grid">
+          <div class="secao-lateral">
+            <h2 class="secao-titulo">Publications</h2>
+            <p class="numeros" id="numeros"></p>
+            <nav class="regua" aria-label="Jump to year">
+              <ol id="regua"></ol>
+            </nav>
+          </div>
 
           <div class="publicacoes-conteudo">
             <div class="controles" aria-label="Filters">
@@ -73,8 +76,12 @@
       </section>
 
       <section class="secao secao-contato" id="contato">
-        <h2 class="secao-titulo">Contact me</h2>
-        <ul class="contato-lista" id="contato-lista"></ul>
+        <div class="secao-grid">
+          <div class="secao-lateral">
+            <h2 class="secao-titulo">Contact me</h2>
+          </div>
+          <ul class="contato-lista" id="contato-lista"></ul>
+        </div>
       </section>
     </main>
   </div>
