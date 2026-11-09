@@ -8,11 +8,11 @@
   <link rel="icon" type="image/png" href="logo/logo-black.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@400;700&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <a class="pular" href="#lista">Skip to articles</a>
+  <a class="pular" href="#sobre">Skip to content</a>
 
   <header class="topo">
     <div class="topo-interno">
@@ -33,21 +33,43 @@
   </header>
 
   <div class="pagina">
-    <nav class="regua" aria-label="Timeline">
-      <ol id="regua"></ol>
+    <nav class="menu-lateral" aria-label="Section navigation">
+      <ol id="menu-secoes">
+        <li data-secao="sobre"><a href="#sobre">About me</a></li>
+        <li data-secao="publicacoes"><a href="#publicacoes">Publications</a></li>
+        <li data-secao="contato"><a href="#contato">Contact me</a></li>
+      </ol>
     </nav>
 
     <main>
-      <section class="controles" aria-label="Filters">
-        <div class="chips" id="chips" role="group" aria-label="Filter by topic"></div>
-        <label class="busca">
-          <span>Search by title, journal or co-author</span>
-          <input type="search" id="busca" autocomplete="off">
-        </label>
-        <p class="contagem" id="contagem" role="status" aria-live="polite"></p>
+      <section class="secao secao-sobre" id="sobre">
+        <h2 class="secao-titulo">About me</h2>
+        <p class="bio" id="bio"></p>
       </section>
 
-      <div id="lista"></div>
+      <section class="secao secao-publicacoes" id="publicacoes">
+        <h2 class="secao-titulo">Publications</h2>
+
+        <nav class="regua" aria-label="Jump to year">
+          <ol id="regua"></ol>
+        </nav>
+
+        <div class="controles" aria-label="Filters">
+          <div class="chips" id="chips" role="group" aria-label="Filter by topic"></div>
+          <label class="busca">
+            <span>Search by title, journal or co-author</span>
+            <input type="search" id="busca" autocomplete="off">
+          </label>
+          <p class="contagem" id="contagem" role="status" aria-live="polite"></p>
+        </div>
+
+        <div id="lista"></div>
+      </section>
+
+      <section class="secao secao-contato" id="contato">
+        <h2 class="secao-titulo">Contact me</h2>
+        <ul class="contato-lista" id="contato-lista"></ul>
+      </section>
     </main>
   </div>
 

@@ -35,15 +35,21 @@
   // ---------------- Cabeçalho ----------------
 
   function montaCabecalho() {
-    document.getElementById("nome").textContent = PERFIL.nome || "";
+    var nomeEl = document.getElementById("nome");
+    nomeEl.innerHTML = "";
+    if (PERFIL.saudacao) {
+      nomeEl.appendChild(document.createTextNode(PERFIL.saudacao + " "));
+    }
+    nomeEl.appendChild(el("span", { class: "nome-destaque", texto: PERFIL.nome || "" }));
 
     var resumoEl = document.getElementById("resumo");
     (PERFIL.resumo || "")
-      .split("|")
+      .split(/[|·]/)
       .map(function (t) { return t.trim(); })
       .filter(Boolean)
       .forEach(function (trecho) {
-        resumoEl.appendChild(el("li", { texto: trecho }));
+        var destaque = trecho.toLowerCase() === "open to postdoctoral research";
+        resumoEl.appendChild(el("li", { class: destaque ? "resumo-destaque" : "", texto: trecho }));
       });
 
     var anos = ARTIGOS.map(function (a) { return a.ano; });
@@ -55,7 +61,32 @@
     var linksEl = document.getElementById("links");
     (PERFIL.links || []).forEach(function (l, i) {
       if (i > 0) linksEl.appendChild(document.createTextNode("  ·  "));
-      linksEl.appendChild(el("a", { href: l.url, target: "_blank", rel: "noopener", texto: l.rotulo }));
+      var a = el("a", { href: l.url, target: "_blank", rel: "noopener", class: "link-com-icone" });
+      if (l.icone) a.appendChild(el("img", { src: l.icone, alt: "", class: "link-icone" }));
+      a.appendChild(document.createTextNode(l.rotulo));
+      linksEl.appendChild(a);
+    });
+  }
+
+  // ---------------- About me ----------------
+
+  function montaSobre() {
+    document.getElementById("bio").textContent = PERFIL.bio || "";
+  }
+
+  // ---------------- Contact me ----------------
+
+  function montaContato() {
+    var raiz = document.getElementById("contato-lista");
+    (PERFIL.contato || []).forEach(function (c) {
+      var a = el("a", { href: c.url, target: "_blank", rel: "noopener", class: "contato-link" }, [
+        c.icone ? el("img", { src: c.icone, alt: "", class: "contato-icone" }) : null,
+        el("span", { class: "contato-texto" }, [
+          el("span", { class: "contato-rotulo", texto: c.rotulo }),
+          el("span", { class: "contato-valor", texto: c.valor }),
+        ]),
+      ]);
+      raiz.appendChild(el("li", {}, [a]));
     });
   }
 
@@ -91,6 +122,24 @@
         });
       },
       { rootMargin: "-20% 0px -65% 0px" }
+    );
+    secoes.forEach(function (s) { obs.observe(s); });
+  }
+
+  // ---------------- Menu lateral (seções) ----------------
+
+  function montaMenu() {
+    var secoes = Array.from(document.querySelectorAll(".secao"));
+    if (!secoes.length || !("IntersectionObserver" in window)) return;
+    var obs = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          var li = document.querySelector('.menu-lateral li[data-secao="' + entry.target.id + '"]');
+          if (!li) return;
+          li.classList.toggle("ativo", entry.isIntersecting);
+        });
+      },
+      { rootMargin: "-30% 0px -60% 0px" }
     );
     secoes.forEach(function (s) { obs.observe(s); });
   }
@@ -218,6 +267,9 @@
   // ---------------- Início ----------------
 
   montaCabecalho();
+  montaSobre();
+  montaContato();
+  montaMenu();
   montaRegua();
   montaChips();
   montaBusca();

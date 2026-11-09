@@ -3,15 +3,33 @@
 window.PERFIL = {
   "nome": "Camila Assis Tavares",
   "nomeCitacao": "C. A. Tavares",
+  "saudacao": "Hello! I'm",
+  "bio": "I am a computational chemist and postdoctoral researcher at UNICAMP, Brazil, specializing in molecular dynamics, computational biophysics, and biomolecular modeling. My research focuses on molecular interactions in complex biological systems, combining computational methods, scientific programming, and data visualization.",
   "resumo": "PhD Researcher in Computational Chemistry · Molecular Dynamics · Coarse-Grained Simulations · Biomolecular Systems · Open to Postdoctoral Research",
   "links": [
     {
       "rotulo": "Lattes",
-      "url": "http://lattes.cnpq.br/1933195871728569"
+      "url": "http://lattes.cnpq.br/1933195871728569",
+      "icone": "img/icon-lattes.svg"
     },
     {
        "rotulo": "ORCID",
-       "url": "https://orcid.org/0000-0002-0710-3956"
+       "url": "https://orcid.org/0000-0002-0710-3956",
+       "icone": "img/icon-orcid.svg"
+    }
+  ],
+  "contato": [
+    {
+      "rotulo": "Email",
+      "valor": "cvmi@unicamp.br",
+      "url": "mailto:cvmi@unicamp.br",
+      "icone": "img/icon-email.svg"
+    },
+    {
+      "rotulo": "LinkedIn",
+      "valor": "linkedin.com/in/cvmi",
+      "url": "https://www.linkedin.com/in/cvmi/",
+      "icone": "img/icon-linkedin.svg"
     }
   ],
   "atualizado": "November 2026"
