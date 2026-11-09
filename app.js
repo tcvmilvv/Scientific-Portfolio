@@ -80,6 +80,77 @@
     document.getElementById("bio").textContent = PERFIL.bio || "";
   }
 
+  // ---------------- Scientific Illustration ----------------
+
+  var ILUSTRACOES = window.ILUSTRACOES || [];
+
+  function montaIlustracoes() {
+    if (!ILUSTRACOES.length) return;
+
+    var numerosEl = document.getElementById("ilustracoes-numeros");
+    if (numerosEl) {
+      numerosEl.textContent =
+        ILUSTRACOES.length + (ILUSTRACOES.length === 1 ? " piece" : " pieces");
+    }
+
+    var raiz = document.getElementById("ilustracoes-grade");
+    ILUSTRACOES.forEach(function (ilu, i) {
+      var figura = el("figure", { class: "ilustracao" }, [
+        el("button", { type: "button", class: "ilustracao-botao", "data-indice": i }, [
+          el("img", {
+            src: ilu.imagem,
+            alt: ilu.titulo || "",
+            loading: "lazy",
+            width: ilu.largura || "",
+            height: ilu.altura || "",
+          }),
+        ]),
+        el("figcaption", {}, [
+          el("p", { class: "ilustracao-titulo", texto: ilu.titulo || "" }),
+          ilu.descricao ? el("p", { class: "ilustracao-descricao", texto: ilu.descricao }) : null,
+        ]),
+      ]);
+      raiz.appendChild(figura);
+    });
+
+    raiz.addEventListener("click", function (e) {
+      var btn = e.target.closest(".ilustracao-botao");
+      if (!btn) return;
+      abreLightbox(Number(btn.getAttribute("data-indice")));
+    });
+  }
+
+  function abreLightbox(indice) {
+    var ilu = ILUSTRACOES[indice];
+    if (!ilu) return;
+    var overlay = document.getElementById("lightbox");
+    document.getElementById("lightbox-img").src = ilu.imagem;
+    document.getElementById("lightbox-img").alt = ilu.titulo || "";
+    document.getElementById("lightbox-legenda").textContent = ilu.titulo || "";
+    overlay.hidden = false;
+    document.body.style.overflow = "hidden";
+  }
+
+  function fechaLightbox() {
+    var overlay = document.getElementById("lightbox");
+    overlay.hidden = true;
+    document.getElementById("lightbox-img").src = "";
+    document.body.style.overflow = "";
+  }
+
+  function montaLightbox() {
+    var overlay = document.getElementById("lightbox");
+    if (!overlay) return;
+    overlay.addEventListener("click", function (e) {
+      if (e.target.closest(".lightbox-imagem")) return;
+      fechaLightbox();
+    });
+    document.getElementById("lightbox-fechar").addEventListener("click", fechaLightbox);
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && !overlay.hidden) fechaLightbox();
+    });
+  }
+
   // ---------------- Contact me ----------------
 
   function montaContato() {
@@ -274,6 +345,8 @@
 
   montaCabecalho();
   montaSobre();
+  montaIlustracoes();
+  montaLightbox();
   montaContato();
   montaMenu();
   montaRegua();

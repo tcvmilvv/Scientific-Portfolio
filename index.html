@@ -18,6 +18,7 @@
     <ol id="menu-secoes">
       <li data-secao="sobre"><a href="#sobre">About me</a></li>
       <li data-secao="publicacoes"><a href="#publicacoes">Publications</a></li>
+      <li data-secao="ilustracoes"><a href="#ilustracoes">Scientific Illustration</a></li>
       <li data-secao="contato"><a href="#contato">Contact me</a></li>
     </ol>
   </nav>
@@ -72,6 +73,12 @@
         </div>
       </section>
 
+      <section class="secao secao-ilustracoes" id="ilustracoes">
+        <h2 class="secao-titulo">Scientific Illustration</h2>
+        <p class="numeros" id="ilustracoes-numeros"></p>
+        <div class="ilustracoes-grade" id="ilustracoes-grade"></div>
+      </section>
+
       <section class="secao secao-contato" id="contato">
         <h2 class="secao-titulo">Contact me</h2>
         <ul class="contato-lista" id="contato-lista"></ul>
@@ -84,6 +91,14 @@
   </footer>
 
   <div class="aviso" id="aviso" role="status" aria-live="polite"></div>
+
+  <div class="lightbox" id="lightbox" hidden>
+    <button type="button" class="lightbox-fechar" id="lightbox-fechar" aria-label="Close">&times;</button>
+    <figure class="lightbox-imagem">
+      <img id="lightbox-img" src="" alt="">
+      <figcaption id="lightbox-legenda"></figcaption>
+    </figure>
+  </div>
 
   <script src="data/artigos.js"></script>
   <script src="app.js"></script>

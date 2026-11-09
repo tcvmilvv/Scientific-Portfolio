@@ -19,6 +19,10 @@ All the data lives in **`data/artigos.js`** — you don't need to touch the HTML
 - `"links"`: header links (Lattes, ORCID, …), each with `"rotulo"`, `"url"` and an optional `"icone"` (path to an SVG in `img/`).
 - `"contato"`: the rows in the **Contact me** section, each with `"rotulo"` (small label), `"valor"` (what's shown), `"url"` and an optional `"icone"`.
 
+**Scientific Illustration (`window.ILUSTRACOES`)**
+- Covers and graphical abstracts shown in the **Scientific Illustration** section, as a gallery — click any piece to view it full-size.
+- **Add a piece**: copy one of the `{ ... }` blocks in `data/artigos.js`, save the image in `ilustracoes/`, and fill in `"titulo"`, `"descricao"`, `"imagem"` (the path) and, if you know them, `"largura"`/`"altura"` (its pixel size — optional, just avoids a small layout jump while it loads).
+
 **Articles (`window.ARTIGOS`)**
 - **Add a new article**: copy one of the `{ ... }` blocks, change the values, and keep a comma between blocks.
 - **Add a cover**: save the image in `capas/` (up to ~900px wide, `.jpg` is fine), fill in `"capa": "capas/your-file-name.jpg"` and `"capa_dim": [width, height]` for that article. If the article was the issue's actual featured cover, also fill `"capa_destaque"` with the badge text (e.g. `"Featured cover · May 2027"`); otherwise leave it `false`.
@@ -34,9 +38,10 @@ index.html   → page structure (header, sidebar nav, About me / Publications / 
 style.css    → all the visual design (colors, type, layout)
 app.js       → builds the page from data/artigos.js
 data/
-  artigos.js → your data: profile, bio, links, contact and article list (the only file you should edit day to day)
+  artigos.js → your data: profile, bio, links, contact, illustrations and article list (the only file you should edit day to day)
 capas/       → journal cover images
-logo/        → your logo (logo-black.png for light mode, logo-white.png for dark mode)
+ilustracoes/ → covers and graphical abstracts shown in Scientific Illustration
+logo/        → your logo (logo-black.svg for light mode, logo-white.svg for dark mode)
 img/         → small icons used next to links (Lattes, ORCID, email, LinkedIn)
 ```
 

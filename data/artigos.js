@@ -37,6 +37,34 @@ window.PERFIL = {
   "atualizado": "November 2026"
 };
 
+// Scientific Illustration: covers and graphical abstracts.
+// Add a new { ... } block to add another piece; "imagem" is the path to the
+// image file (save it in ilustracoes/), "largura"/"altura" are its pixel
+// dimensions (helps the page avoid layout shift while it loads).
+window.ILUSTRACOES = [
+  {
+    "titulo": "Zika virion membrane architecture",
+    "descricao": "Cutaway of the coarse-grained Zika virion envelope, from the full particle down to the lipid bilayer and the radial density profile of head, glycerol and tail beads.",
+    "imagem": "ilustracoes/virus-membrane-zoom.png",
+    "largura": 1838,
+    "altura": 706
+  },
+  {
+    "titulo": "Labeled virion cross-section",
+    "descricao": "Graphical abstract identifying the ionic solvation shells, E–M protein complex and lipid bilayer in a coarse-grained enveloped-virus model.",
+    "imagem": "ilustracoes/virus-cutaway-labeled.png",
+    "largura": 1437,
+    "altura": 1094
+  },
+  {
+    "titulo": "Zika virus — blueprint poster",
+    "descricao": "Blueprint-style summary of the SIRAH-force-field Zika virus model: particle size, lipid composition and envelope-protein domains.",
+    "imagem": "ilustracoes/zika-blueprint-poster.jpg",
+    "largura": 1400,
+    "altura": 1863
+  }
+];
+
 window.ARTIGOS = [
   {
     "id": "10-1016-j-cam-2026-117560",
