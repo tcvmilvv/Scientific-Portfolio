@@ -138,7 +138,7 @@
     var obs = new IntersectionObserver(
       function (entries) {
         entries.forEach(function (entry) {
-          var li = document.querySelector('.menu-lateral li[data-secao="' + entry.target.id + '"]');
+          var li = document.querySelector('.menu-topo li[data-secao="' + entry.target.id + '"]');
           if (!li) return;
           li.classList.toggle("ativo", entry.isIntersecting);
         });
