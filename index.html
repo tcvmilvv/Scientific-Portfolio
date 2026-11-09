@@ -1,62 +1,102 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Camila Assis Tavares — Published Articles</title>
-  <meta name="description" content="Published articles in computational chemistry: molecular dynamics, force fields and inverse problems.">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23083D77'/%3E%3Cpath d='M9 22 16 10l7 12' fill='none' stroke='%23fff' stroke-width='2'/%3E%3Ccircle cx='9' cy='22' r='3.2' fill='%23fff'/%3E%3Ccircle cx='16' cy='10' r='3.2' fill='%23F4D35E'/%3E%3Ccircle cx='23' cy='22' r='3.2' fill='%23fff'/%3E%3C/svg%3E">
+
+  <title>Camila Assis Tavares</title>
+
+  <meta
+    name="description"
+    content="Publicações de Camila Assis Tavares."
+  >
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231E3A8A'/%3E%3C/svg%3E">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&display=swap" rel="stylesheet">
+
+  <!-- Averia -->
+  <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300;400;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <a class="pular" href="#lista">Skip to articles</a>
+
+  <a class="pular" href="#lista">Pular para os artigos</a>
 
   <header class="topo">
     <div class="topo-interno">
+
       <div class="topo-cabeca">
-        <!-- Placeholder for a logo. Once you have your own, replace the
-             line below with: <img src="logo.svg" alt="Camila Assis Tavares" width="48" height="48"> -->
-        <div class="marca" id="marca" aria-hidden="true"></div>
         <h1 id="nome"></h1>
       </div>
-      <div class="topo-acento" aria-hidden="true"></div>
+
       <ul class="resumo" id="resumo"></ul>
+
       <div class="topo-rodape">
         <p class="numeros" id="numeros"></p>
         <p class="links" id="links"></p>
       </div>
+
     </div>
   </header>
 
   <div class="pagina">
-    <nav class="regua" aria-label="Timeline">
+
+    <nav class="regua" aria-label="Linha do tempo">
       <ol id="regua"></ol>
     </nav>
 
     <main>
-      <section class="controles" aria-label="Filters">
-        <div class="chips" id="chips" role="group" aria-label="Filter by topic"></div>
+
+      <section class="controles" aria-label="Filtros">
+
+        <div
+          class="chips"
+          id="chips"
+          role="group"
+          aria-label="Filtrar por tema"
+        ></div>
+
         <label class="busca">
-          <span>Search by title, journal or co-author</span>
-          <input type="search" id="busca" autocomplete="off">
+          <span>Buscar por título, revista ou coautor</span>
+          <input
+            type="search"
+            id="busca"
+            autocomplete="off"
+          >
         </label>
-        <p class="contagem" id="contagem" role="status" aria-live="polite"></p>
+
+        <p
+          class="contagem"
+          id="contagem"
+          role="status"
+          aria-live="polite"
+        ></p>
+
       </section>
 
       <div id="lista"></div>
+
     </main>
+
   </div>
 
   <footer class="rodape">
     <p id="rodape"></p>
   </footer>
 
-  <div class="aviso" id="aviso" role="status" aria-live="polite"></div>
+  <div
+    class="aviso"
+    id="aviso"
+    role="status"
+    aria-live="polite"
+  ></div>
 
   <script src="data/artigos.js"></script>
   <script src="app.js"></script>
+
 </body>
 </html>
