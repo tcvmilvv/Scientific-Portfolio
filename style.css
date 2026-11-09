@@ -79,12 +79,9 @@ a{ color: inherit; }
 
 .topo{
   position: relative;
-  background:
-    repeating-linear-gradient(90deg, var(--linha) 0 1px, transparent 1px calc((var(--max) - 3rem) / 12));
-  background-position: center top;
-  background-size: calc(var(--max) + 1px) 100%;
-  background-repeat: no-repeat;
-  padding: clamp(3rem, 7vw, 5.5rem) clamp(1.5rem, 5vw, 4rem) clamp(2.5rem, 5vw, 3.5rem);
+  padding: clamp(3rem, 7vw, 5.5rem)
+           clamp(1.5rem, 5vw, 4rem)
+           clamp(2.5rem, 5vw, 3.5rem);
 }
 
 .topo-interno{
