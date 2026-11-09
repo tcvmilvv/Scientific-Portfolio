@@ -54,8 +54,13 @@
       .forEach(function (trecho) {
         resumoEl.appendChild(el("li", { texto: trecho }));
       });
+
+    var situacaoEl = document.getElementById("situacao");
     if (PERFIL.situacao) {
-      resumoEl.appendChild(el("li", { class: "resumo-destaque", texto: PERFIL.situacao }));
+      situacaoEl.textContent = PERFIL.situacao;
+      situacaoEl.hidden = false;
+    } else {
+      situacaoEl.hidden = true;
     }
 
     var anos = ARTIGOS.map(function (a) { return a.ano; });
