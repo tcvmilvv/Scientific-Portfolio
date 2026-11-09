@@ -34,17 +34,8 @@
 
   // ---------------- Cabeçalho ----------------
 
-  function iniciais(nome) {
-    var partes = (nome || "").trim().split(/\s+/);
-    if (!partes.length) return "";
-    var primeira = partes[0].charAt(0);
-    var ultima = partes.length > 1 ? partes[partes.length - 1].charAt(0) : "";
-    return (primeira + ultima).toUpperCase();
-  }
-
   function montaCabecalho() {
     document.getElementById("nome").textContent = PERFIL.nome || "";
-    document.getElementById("marca").textContent = iniciais(PERFIL.nome);
 
     var resumoEl = document.getElementById("resumo");
     (PERFIL.resumo || "")

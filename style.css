@@ -10,8 +10,8 @@
   --tinta: #0d0d0c;
   --tinta-suave: #62615b;
   --linha: #dddbd3;
-  --ouro: #78611d;
-  --ouro-claro: #f4d35e;
+  --azul: #1E3A8A;
+  --azul-claro: #5779db;
   --branco: #ffffff;
 
   --serif: "Newsreader", Georgia, "Times New Roman", serif;
@@ -29,8 +29,8 @@
     --tinta: #f3f2ec;
     --tinta-suave: #9b9a92;
     --linha: #2a2a26;
-    --ouro: #e3b64f;
-    --ouro-claro: #f4d35e;
+    --azul: #7994e2;
+    --azul-claro: #5779db;
     --branco: #121210;
   }
 }
@@ -40,8 +40,8 @@
   --tinta: #f3f2ec;
   --tinta-suave: #9b9a92;
   --linha: #2a2a26;
-  --ouro: #e3b64f;
-  --ouro-claro: #f4d35e;
+  --azul: #7994e2;
+  --azul-claro: #5779db;
   --branco: #121210;
 }
 
@@ -60,7 +60,7 @@ body{
   -webkit-font-smoothing: antialiased;
 }
 
-::selection{ background: var(--ouro-claro); color: var(--tinta); }
+::selection{ background: var(--azul-claro); color: var(--tinta); }
 
 a{ color: inherit; }
 :focus-visible{ outline: 2px solid var(--tinta); outline-offset: 3px; }
@@ -95,17 +95,23 @@ a{ color: inherit; }
   column-gap: clamp(1rem, 3vw, 2rem);
 }
 
-/* placeholder for a logo — once you have one, swap the content of
-   #marca in index.html for <img src="..."> */
 .marca{
-  width: 48px; height: 48px;
-  margin-top: 0.4em;
-  border: 1.5px solid var(--tinta);
-  display: flex; align-items: center; justify-content: center;
-  font-family: var(--sans); font-size: 0.95rem; font-weight: 700;
-  letter-spacing: 0.01em;
-  color: var(--tinta);
+  width: 52px; height: 52px;
+  margin-top: 0.35em;
+  flex: none;
 }
+.marca img{
+  display: block;
+  width: 100%; height: 100%;
+  object-fit: contain;
+}
+.marca .marca-escura{ display: none; }
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]) .marca .marca-clara{ display: none; }
+  :root:not([data-theme="light"]) .marca .marca-escura{ display: block; }
+}
+:root[data-theme="dark"] .marca .marca-clara{ display: none; }
+:root[data-theme="dark"] .marca .marca-escura{ display: block; }
 
 #nome{
   font-family: var(--display);
@@ -119,7 +125,7 @@ a{ color: inherit; }
 
 .topo-acento{
   width: 72px; height: 4px;
-  background: var(--ouro-claro);
+  background: var(--azul-claro);
   margin: 1.5rem 0 1.6rem;
 }
 
@@ -159,12 +165,12 @@ a{ color: inherit; }
   text-decoration-thickness: 1.5px;
   text-underline-offset: 3px;
 }
-.links a:hover{ text-decoration-color: var(--ouro-claro); }
+.links a:hover{ text-decoration-color: var(--azul-claro); }
 
 @media (max-width: 560px){
   .topo{ padding-top: 2.6rem; padding-bottom: 2.2rem; }
   .topo-cabeca{ grid-template-columns: 1fr; row-gap: 0.85rem; }
-  .marca{ width: 36px; height: 36px; font-size: 0.74rem; margin-top: 0; }
+  .marca{ width: 38px; height: 38px; margin-top: 0; }
   #nome{ font-size: clamp(1rem, 6.8vw, 2.1rem); }
   .links{ margin-left: 0; }
 }
@@ -221,7 +227,7 @@ a{ color: inherit; }
 }
 .regua button:hover{ color: var(--tinta); }
 .regua li.ativo button{ color: var(--tinta); font-size: 0.92rem; }
-.regua li.ativo button::before{ background: var(--ouro-claro); border-color: var(--ouro); }
+.regua li.ativo button::before{ background: var(--azul-claro); border-color: var(--azul); }
 
 @media (max-width: 900px){
   .pagina{ grid-template-columns: 1fr; }
@@ -324,7 +330,7 @@ main{ min-width: 0; padding: 0 clamp(1.5rem, 4vw, 3rem) 6rem; }
 
 .artigo-revista{
   font-family: var(--sans); font-size: 0.78rem; font-weight: 600;
-  color: var(--ouro);
+  color: var(--azul);
   margin: 0 0 0.35rem;
 }
 
@@ -351,7 +357,7 @@ main{ min-width: 0; padding: 0 clamp(1.5rem, 4vw, 3rem) 6rem; }
   font-size: 0.82rem; color: var(--tinta);
   text-decoration-color: var(--linha); text-underline-offset: 3px;
 }
-.artigo-doi:hover{ text-decoration-color: var(--ouro-claro); }
+.artigo-doi:hover{ text-decoration-color: var(--azul-claro); }
 
 .artigo-tema{
   font-size: 0.74rem; color: var(--tinta-suave);
@@ -360,7 +366,7 @@ main{ min-width: 0; padding: 0 clamp(1.5rem, 4vw, 3rem) 6rem; }
 }
 
 .artigo-destaque{
-  font-size: 0.74rem; color: var(--ouro);
+  font-size: 0.74rem; color: var(--azul);
   font-style: italic; font-family: var(--serif);
 }
 
