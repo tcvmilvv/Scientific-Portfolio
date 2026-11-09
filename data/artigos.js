@@ -69,7 +69,7 @@ window.ARTIGOS = [
     "doi": "10.3390/biophysica5010004",
     "meta": "vol. 5, no. 1, art. 4",
     "tema": "Molecular dynamics",
-    "capa": null,
+    "capa": "capas/generic_issue_cover_big_34664.png",
     "capa_destaque": false,
     "capa_dim": null
   },
@@ -126,7 +126,7 @@ window.ARTIGOS = [
     "doi": "10.1007/s00894-023-05530-7",
     "meta": "vol. 29, no. 4, art. 123",
     "tema": "Force fields",
-    "capa": null,
+    "capa": "capas/894.jpeg",
     "capa_destaque": false,
     "capa_dim": null
   },
@@ -200,7 +200,7 @@ window.ARTIGOS = [
     "doi": "10.1016/j.jmgm.2023.108511",
     "meta": "vol. 122, art. 108511",
     "tema": "Force fields",
-    "capa": null,
+    "capa": "capas/1-s2.0-S1093326323X00047-cov200h.jpeg",
     "capa_destaque": false,
     "capa_dim": null
   },
@@ -220,7 +220,7 @@ window.ARTIGOS = [
     "doi": "10.1002/cem.3507",
     "meta": "art. e3507",
     "tema": "Inverse problems",
-    "capa": null,
+    "capa": "capas/cem.v37.10.cover.jpeg",
     "capa_destaque": false,
     "capa_dim": null
   },
@@ -297,7 +297,7 @@ window.ARTIGOS = [
     "doi": "10.1016/j.cam.2020.112984",
     "meta": "vol. 381, art. 112984",
     "tema": "Inverse problems",
-    "capa": null,
+    "capa": "capas/jcam-2026-v494.jpg",
     "capa_destaque": false,
     "capa_dim": null
   }
