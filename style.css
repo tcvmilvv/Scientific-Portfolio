@@ -546,6 +546,38 @@ main{ min-width: 0; padding: 0 var(--pad-x) 6rem; }
   margin: 0.2rem 0 0;
 }
 
+/* ---------------- Software ---------------- */
+
+.ferramentas-grade{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: clamp(1.2rem, 3vw, 2rem);
+}
+.ferramenta{
+  border: 1px solid var(--linha); border-radius: var(--radius);
+  padding: 1.3rem 1.4rem;
+  display: flex; flex-direction: column; gap: 0.6rem;
+}
+.ferramenta-img{ aspect-ratio: 16 / 9; overflow: hidden; background: var(--papel-alt); margin: -0.2rem 0 0.4rem; }
+.ferramenta-img img{ display: block; width: 100%; height: 100%; object-fit: cover; }
+.ferramenta-status{
+  margin: 0; font-family: var(--sans); font-size: 0.72rem; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--azul);
+}
+.ferramenta-nome{ margin: 0; font-family: var(--display); font-weight: 700; font-size: 1.25rem; color: var(--tinta); }
+.ferramenta-descricao{ margin: 0; font-family: var(--sans); font-size: 0.92rem; line-height: 1.6; color: var(--tinta-suave); }
+.ferramenta-tags{ list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.ferramenta-tags li{
+  font-family: var(--sans); font-size: 0.75rem; color: var(--tinta-suave);
+  border: 1px solid var(--linha); border-radius: 999px; padding: 0.15rem 0.6rem;
+}
+.ferramenta-links{ margin: auto 0 0; padding-top: 0.4rem; display: flex; flex-wrap: wrap; gap: 0.4rem 1rem; }
+.ferramenta-link{
+  font-family: var(--sans); font-size: 0.88rem; font-weight: 600;
+  color: var(--tinta); text-decoration: none; border-bottom: 1px solid var(--azul-claro);
+}
+.ferramenta-link:hover{ color: var(--azul); }
+
 /* Lightbox */
 
 .lightbox{

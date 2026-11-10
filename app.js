@@ -156,6 +156,36 @@
     });
   }
 
+  // ---------------- Software ----------------
+
+  function montaFerramentas() {
+    var raiz = document.getElementById("ferramentas-grade");
+    var lista = window.FERRAMENTAS || [];
+    if (!raiz) return;
+    if (!lista.length) {
+      document.getElementById("ferramentas").hidden = true;
+      var li = document.querySelector('.menu-topo li[data-secao="ferramentas"]');
+      if (li) li.hidden = true;
+      return;
+    }
+    lista.forEach(function (f) {
+      var links = (f.links || []).map(function (l) {
+        return el("a", { class: "ferramenta-link", href: l.url, target: "_blank", rel: "noopener", texto: l.rotulo });
+      });
+      var tags = (f.tags || []).map(function (t) { return el("li", { texto: t }); });
+      raiz.appendChild(el("article", { class: "ferramenta" }, [
+        f.imagem ? el("div", { class: "ferramenta-img" }, [
+          el("img", { src: f.imagem, alt: f.nome || "", loading: "lazy" })
+        ]) : null,
+        f.status ? el("p", { class: "ferramenta-status", texto: f.status }) : null,
+        el("h3", { class: "ferramenta-nome", texto: f.nome || "" }),
+        f.descricao ? el("p", { class: "ferramenta-descricao", texto: f.descricao }) : null,
+        tags.length ? el("ul", { class: "ferramenta-tags" }, tags) : null,
+        links.length ? el("p", { class: "ferramenta-links" }, links) : null,
+      ]));
+    });
+  }
+
   // ---------------- Contact me ----------------
 
   function montaContato() {
@@ -352,6 +382,7 @@
   montaSobre();
   montaIlustracoes();
   montaLightbox();
+  montaFerramentas();
   montaContato();
   montaMenu();
   montaRegua();
