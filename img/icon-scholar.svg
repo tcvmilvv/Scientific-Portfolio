@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 512 512"
+   version="1.1"
+   id="svg3"
+   sodipodi:docname="icon-scholar.svg"
+   xml:space="preserve"
+   inkscape:version="1.4.4 (1:1.4.4+202605061432+dcaf3e7d9e)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+     id="defs3" /><sodipodi:namedview
+     id="namedview3"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:zoom="1.1435242"
+     inkscape:cx="191.07597"
+     inkscape:cy="275.46421"
+     inkscape:current-layer="svg3" /><style
+     type="text/css"
+     id="style1">
+	.st0{fill:#A6CE39;}
+	.st1{fill:#FFFFFF;}
+</style><g
+     style="fill:#e52b50;fill-opacity:1"
+     id="g4"
+     transform="matrix(21.18292,0,0,21.18292,1.80496,1.80496)"><path
+       d="m 12,24 a 7,7 0 1 1 0,-14 7,7 0 0 1 0,14 z M 12,0 0,9.5 4.838,13.44 A 8,8 0 0 1 12,9 8,8 0 0 1 19.162,13.44 L 24,9.5 Z"
+       id="path1"
+       style="fill:#e52b50;fill-opacity:1" /></g></svg>
