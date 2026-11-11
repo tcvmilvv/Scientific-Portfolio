@@ -19,7 +19,6 @@ window.PERFIL = {
        "url": "https://orcid.org/0000-0002-0710-3956",
        "icone": "img/icon-orcid.svg"
     },
-    },
     {
        "rotulo": "Scholar",
        "url": "https://scholar.google.com.br/citations?hl=pt-BR&authuser=1&user=BL8n3LMAAAAJ",

@@ -48,14 +48,3 @@ img/         → small icons used next to links (Lattes, ORCID, email, LinkedIn)
 ## Notes on the icons
 
 `img/icon-lattes.svg` and `img/icon-email.svg` are simple placeholder badges. If you'd rather use the official Lattes mark, drop your own SVG/PNG into `img/` and point `"icone"` at it in `data/artigos.js` — no other change needed.
-
-## Logo animation
-
-The logo in the header is an inline SVG animated on hover:
-
-- mouse **enters** → morph 01 › 02 › 03 › 02 › 01
-- mouse **leaves** → morph 01 › 04 › 05 › 04 › 01
-- on touch screens a tap plays both sequences; `prefers-reduced-motion` disables it.
-
-`data/logo-frames.js` holds the pre-computed morph frames (generated from the five keyframe SVGs) and `logo.js` plays them. To change the animation, re-export the keyframes and regenerate the frames file.
-The logo follows the text colour, so it works in light and dark mode.
