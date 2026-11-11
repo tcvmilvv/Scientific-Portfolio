@@ -20,10 +20,10 @@ window.PERFIL = {
        "icone": "img/icon-orcid.svg"
     },
     {
-       "rotulo": "Scholar",
-       "url": "https://scholar.google.com.br/citations?hl=pt-BR&authuser=1&user=BL8n3LMAAAAJ",
-       "icone": "img/icon-scholar.svg"
-    },
+      "rotulo": "Scholar",
+      "url": "https://scholar.google.com.br/citations?hl=pt-BR&authuser=1&user=BL8n3LMAAAAJ",
+      "icone": "img/icon-scholar.svg"
+    }
   ],
   "contato": [
     {
