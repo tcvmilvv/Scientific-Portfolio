@@ -57,3 +57,7 @@ Edit `window.ENSINO` in `data/artigos.js` (one block per course/workshop). Only 
 ## About me photo
 
 Save the photo (square or portrait JPG, shown as a 4:5 crop) as `img/foto.jpg` and set `"foto": "img/foto.jpg"` in `PERFIL` (optional `"fotoAlt"`). Without it the section keeps two columns.
+
+## Contact animation
+
+The shape next to "Contact me" is an inline SVG animated by `contato-anim.js` from the pre-computed frames in `data/contato-frames.js`: a pulse runs through the circles from right to left and the loop closes seamlessly (5 s per pass; change `PERIODO` in `contato-anim.js`). It starts by itself, has no controls, pauses while off-screen and is static with `prefers-reduced-motion`. Colour = `--azul`. Width: `--arte-col` in `.contato-grid`.

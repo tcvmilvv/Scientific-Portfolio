@@ -249,7 +249,7 @@ main{ min-width: 0; padding: 0 var(--pad-x) 6rem; }
 .sobre-foto{ margin: 0; justify-self: end; width: 100%; }
 .sobre-foto[hidden]{ display: none; }
 .sobre-foto img{
-  display: block; width: 70%;
+  display: block; width: 100%;
   aspect-ratio: 4 / 5; object-fit: cover; object-position: 70% 30%;
   margin-left: auto;
   border-radius: 6px;
@@ -364,6 +364,18 @@ main{ min-width: 0; padding: 0 var(--pad-x) 6rem; }
   .regua button::before{ left: 100%; top: 50%; transform: translate(4px,-50%); margin: 0; }
 }
 
+.contato-grid{
+  display: grid;
+  grid-template-columns: minmax(auto, 220px) minmax(0, 1fr) var(--arte-col, clamp(220px, 32vw, 400px));
+  column-gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
+}
+.contato-grid .secao-titulo{ margin: 0; align-self: start; }
+.contato-arte{ display: block; width: 100%; height: auto; justify-self: end; color: var(--azul); }
+@media (max-width: 700px){
+  .contato-grid{ grid-template-columns: 1fr; row-gap: 1.2rem; }
+  .contato-arte{ max-width: 340px; justify-self: start; }
+}
 .contato-lista{
   list-style: none; margin: 0; padding: 0;
   display: flex; flex-direction: column; gap: 0.2rem;
