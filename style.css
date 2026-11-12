@@ -241,14 +241,17 @@ main{ min-width: 0; padding: 0 var(--pad-x) 6rem; }
   align-items: start;
 }
 .sobre-grid.com-foto{
-  grid-template-columns: minmax(auto, 220px) minmax(0, 1fr) clamp(180px, 25vw, 320px);
+  /* Photo size: change only this value (width of the photo column). */
+  --foto-col: clamp(150px, 19vw, 240px);
+  grid-template-columns: minmax(auto, 220px) minmax(0, 1fr) var(--foto-col);
 }
 .sobre-grid .secao-titulo{ margin: 0; }
 .sobre-foto{ margin: 0; justify-self: end; width: 100%; }
 .sobre-foto[hidden]{ display: none; }
 .sobre-foto img{
   /* Transparent PNG: no box, no crop; the page background shows through. */
-  display: block; width: 70%; height: auto;
+  display: block; width: 100%; height: auto;
+  margin-left: auto;          /* stays glued to the right edge even if width is reduced */
   background: none; border-radius: 0;
 }
 .sobre-corpo{ display: flex; flex-direction: column; gap: 1.4rem; }
