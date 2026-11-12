@@ -60,4 +60,4 @@ Save the photo (square or portrait JPG, shown as a 4:5 crop) as `img/foto.jpg` a
 
 ## Contact animation
 
-The shape next to "Contact me" is an inline SVG animated by `contato-anim.js` from the pre-computed frames in `data/contato-frames.js`: a pulse runs through the circles from right to left and the loop closes seamlessly (5 s per pass; change `PERIODO` in `contato-anim.js`). It starts by itself, has no controls, pauses while off-screen and is static with `prefers-reduced-motion`. Colour = `--azul`. Width: `--arte-col` in `.contato-grid`.
+The shape next to "Contact me" is an inline SVG animated by `contato-anim.js` from the pre-computed frames in `data/contato-frames.js`: a pulse runs through the circles from right to left and the loop closes seamlessly (5 s per pass; change `PERIODO` in `contato-anim.js`). It starts by itself, has no controls, pauses while off-screen and is static with `prefers-reduced-motion`. Colour follows the text colour (black in light mode, white in dark). Width = `--foto-col` (shared with the About me photo).

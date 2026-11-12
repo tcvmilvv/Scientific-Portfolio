@@ -5,6 +5,7 @@
 ----------------------------------------------------------------*/
 
 :root{
+  --foto-col: clamp(150px, 19vw, 240px);   /* width of the right column (photo / contact animation) */
   --papel: #ffffff;
   --papel-alt: #f4f3f0;
   --tinta: #0d0d0c;
@@ -241,15 +242,13 @@ main{ min-width: 0; padding: 0 var(--pad-x) 6rem; }
   align-items: start;
 }
 .sobre-grid.com-foto{
-  /* Photo size: change only this value (width of the photo column). */
-  --foto-col: clamp(150px, 19vw, 240px);
   grid-template-columns: minmax(auto, 220px) minmax(0, 1fr) var(--foto-col);
 }
 .sobre-grid .secao-titulo{ margin: 0; }
 .sobre-foto{ margin: 0; justify-self: end; width: 100%; }
 .sobre-foto[hidden]{ display: none; }
 .sobre-foto img{
-  display: block; width: 100%;
+  display: block; width: 75%;
   aspect-ratio: 4 / 5; object-fit: cover; object-position: 70% 30%;
   margin-left: auto;
   border-radius: 6px;
@@ -365,29 +364,28 @@ main{ min-width: 0; padding: 0 var(--pad-x) 6rem; }
 }
 
 .contato-grid{
+  /* same 3 columns as "About me": title | content | right column */
   display: grid;
-  grid-template-columns: minmax(auto, 220px) minmax(0, 1fr) var(--arte-col, clamp(220px, 32vw, 400px));
+  grid-template-columns: minmax(auto, 220px) minmax(0, 1fr) var(--foto-col);
   column-gap: clamp(1.5rem, 4vw, 3rem);
-  align-items: center;
+  align-items: start;
 }
-.contato-grid .secao-titulo{ margin: 0; align-self: start; }
-.contato-arte{ display: block; width: 100%; height: auto; justify-self: end; color: var(--azul); }
+.contato-grid .secao-titulo{ margin: 0; }
+.contato-arte{ display: block; width: 100%; height: auto; justify-self: end; color: var(--tinta); }
 @media (max-width: 700px){
   .contato-grid{ grid-template-columns: 1fr; row-gap: 1.2rem; }
-  .contato-arte{ max-width: 340px; justify-self: start; }
+  .contato-arte{ max-width: 200px; justify-self: start; }
 }
 .contato-lista{
   list-style: none; margin: 0; padding: 0;
-  display: flex; flex-direction: column; gap: 0.2rem;
+  display: flex; flex-direction: column; gap: 0.35rem;
   max-width: 420px;
 }
 .contato-link{
   display: flex; align-items: center; gap: 0.9rem;
-  padding: 1rem 0.2rem;
-  border-top: 1px solid var(--linha);
+  padding: 0.45rem 0;
   text-decoration: none; color: var(--tinta);
 }
-.contato-lista li:last-child .contato-link{ border-bottom: 1px solid var(--linha); }
 .contato-icone{ width: 34px; height: 34px; flex: none; display: block; }
 .contato-texto{ display: flex; flex-direction: column; gap: 0.15rem; }
 .contato-rotulo{
