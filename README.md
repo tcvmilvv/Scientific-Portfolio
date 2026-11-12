@@ -56,4 +56,4 @@ Edit `window.ENSINO` in `data/artigos.js` (one block per course/workshop). Only 
 
 ## About me photo
 
-Save the photo (transparent PNG works; any size, e.g. 1140x961) as `img/foto.png` and set `"foto": "img/foto.png"` in `PERFIL` (optional `"fotoAlt"`). Without it the section keeps two columns.
+Save the photo (square or portrait JPG, shown as a 4:5 crop) as `img/foto.jpg` and set `"foto": "img/foto.jpg"` in `PERFIL` (optional `"fotoAlt"`). Without it the section keeps two columns.
