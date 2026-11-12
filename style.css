@@ -248,7 +248,7 @@ main{ min-width: 0; padding: 0 var(--pad-x) 6rem; }
 .sobre-foto[hidden]{ display: none; }
 .sobre-foto img{
   /* Transparent PNG: no box, no crop; the page background shows through. */
-  display: block; width: 80%; height: auto;
+  display: block; width: 70%; height: auto;
   background: none; border-radius: 0;
 }
 .sobre-corpo{ display: flex; flex-direction: column; gap: 1.4rem; }
