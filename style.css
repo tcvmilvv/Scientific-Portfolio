@@ -241,14 +241,14 @@ main{ min-width: 0; padding: 0 var(--pad-x) 6rem; }
   align-items: start;
 }
 .sobre-grid.com-foto{
-  grid-template-columns: minmax(auto, 220px) 1fr clamp(180px, 25vw, 320px);
+  grid-template-columns: minmax(auto, 220px) minmax(0, 1fr) clamp(180px, 25vw, 320px);
 }
 .sobre-grid .secao-titulo{ margin: 0; }
-.sobre-foto{ margin: 0; }
+.sobre-foto{ margin: 0; justify-self: end; width: 100%; }
 .sobre-foto[hidden]{ display: none; }
 .sobre-foto img{
   /* Transparent PNG: no box, no crop; the page background shows through. */
-  display: block; width: 70%; height: auto;
+  display: block; width: 100%; height: auto;
   background: none; border-radius: 0;
 }
 .sobre-corpo{ display: flex; flex-direction: column; gap: 1.4rem; }
