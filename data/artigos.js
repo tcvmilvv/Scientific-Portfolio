@@ -93,6 +93,38 @@ window.FERRAMENTAS = [
   }
 ];
 
+// ---- Teaching: courses, workshops, informal classes (shown in the "Teaching" section) ----
+// Each item: "tipo" (Course / Workshop / Tutorial...), "titulo", "funcao" (your role), "instituicao",
+// "periodo", "nivel", "carga" (workload), "formato", "descricao", "tags", "links" [{rotulo,url}].
+// Every field except "titulo" is optional: empty ones are simply not shown.
+window.ENSINO = [
+  {
+    "tipo": "Workshop",
+    "titulo": "Inkscape 101 \u2014 Scientific Image Production",
+    "funcao": "Instructor",
+    "instituicao": "Research group workshop (informal)",
+    "nivel": "Lab colleagues",
+    "descricao": "Hands-on workshop on producing scientific illustrations and graphical abstracts with Inkscape: interface, drawing and node editing, bitmap tracing, radial copies, text and figure composition, export, and design tips (type hierarchy, colour palettes, spacing).",
+    "tags": ["Inkscape", "Scientific illustration", "Graphical abstracts", "Vector graphics"],
+    "links": [
+      { "rotulo": "Handout (PDF, Portuguese)", "url": "ensino/Inkscape-101-apostila.pdf" }
+    ]
+  },
+  {
+    "tipo": "Course",
+    "titulo": "General Chemistry Laboratory I (QG102)",
+    "funcao": "Instructor (Class D)",
+    "instituicao": "UNICAMP \u2014 Institute of Chemistry",
+    "periodo": "1st semester 2025",
+    "nivel": "Undergraduate",
+    "carga": "4 credits \u00b7 15 weeks",
+    "formato": "In person",
+    "descricao": "Weekly laboratory classes illustrating the scientific method, the mole and chemical bonding, redox, chemical equilibrium, pH, solubility product, and the preparation and purification of substances.",
+    "tags": ["Laboratory safety", "Chemical equilibrium", "pH", "Redox", "Titration", "Calorimetry"],
+    "links": []
+  }
+];
+
 window.ARTIGOS = [
   {
     "id": "10-1016-j-cam-2026-117560",

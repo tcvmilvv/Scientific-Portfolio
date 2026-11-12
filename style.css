@@ -104,14 +104,19 @@ a{ color: inherit; }
   width: auto;
   aspect-ratio: 76.3 / 81.2;
   flex: none;
-  color: var(--tinta);   /* the SVG uses currentColor: follows light/dark mode */
-  cursor: pointer;
 }
-.marca svg{
+.marca img{
   display: block;
   width: 100%; height: 100%;
-  overflow: visible;
+  object-fit: contain;
 }
+.marca .marca-escura{ display: none; }
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]) .marca .marca-clara{ display: none; }
+  :root:not([data-theme="light"]) .marca .marca-escura{ display: block; }
+}
+:root[data-theme="dark"] .marca .marca-clara{ display: none; }
+:root[data-theme="dark"] .marca .marca-escura{ display: block; }
 
 #nome{
   font-family: var(--display);
@@ -566,6 +571,8 @@ main{ min-width: 0; padding: 0 var(--pad-x) 6rem; }
   font-family: var(--sans); font-size: 0.75rem; color: var(--tinta-suave);
   border: 1px solid var(--linha); border-radius: 999px; padding: 0.15rem 0.6rem;
 }
+.ensino-meta{ margin: 0; font-family: var(--sans); font-size: 0.9rem; font-weight: 600; color: var(--tinta); }
+.ensino-detalhes{ margin: -0.3rem 0 0; font-family: var(--sans); font-size: 0.84rem; color: var(--tinta-suave); }
 .ferramenta-links{ margin: auto 0 0; padding-top: 0.4rem; display: flex; flex-wrap: wrap; gap: 0.4rem 1rem; }
 .ferramenta-link{
   font-family: var(--sans); font-size: 0.88rem; font-weight: 600;

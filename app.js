@@ -186,6 +186,37 @@
     });
   }
 
+  // ---------------- Teaching ----------------
+
+  function montaEnsino() {
+    var raiz = document.getElementById("ensino-grade");
+    var lista = window.ENSINO || [];
+    if (!raiz) return;
+    if (!lista.length) {
+      document.getElementById("ensino").hidden = true;
+      var li = document.querySelector('.menu-topo li[data-secao="ensino"]');
+      if (li) li.hidden = true;
+      return;
+    }
+    lista.forEach(function (e) {
+      var links = (e.links || []).map(function (l) {
+        return el("a", { class: "ferramenta-link", href: l.url, target: "_blank", rel: "noopener", texto: l.rotulo });
+      });
+      var tags = (e.tags || []).map(function (t) { return el("li", { texto: t }); });
+      var meta = [e.funcao, e.instituicao, e.periodo].filter(Boolean).join(" \u00b7 ");
+      var detalhes = [e.nivel, e.carga, e.formato].filter(Boolean).join(" \u00b7 ");
+      raiz.appendChild(el("article", { class: "ferramenta" }, [
+        e.tipo ? el("p", { class: "ferramenta-status", texto: e.tipo }) : null,
+        el("h3", { class: "ferramenta-nome", texto: e.titulo || "" }),
+        meta ? el("p", { class: "ensino-meta", texto: meta }) : null,
+        detalhes ? el("p", { class: "ensino-detalhes", texto: detalhes }) : null,
+        e.descricao ? el("p", { class: "ferramenta-descricao", texto: e.descricao }) : null,
+        tags.length ? el("ul", { class: "ferramenta-tags" }, tags) : null,
+        links.length ? el("p", { class: "ferramenta-links" }, links) : null,
+      ]));
+    });
+  }
+
   // ---------------- Contact me ----------------
 
   function montaContato() {
@@ -383,6 +414,7 @@
   montaIlustracoes();
   montaLightbox();
   montaFerramentas();
+  montaEnsino();
   montaContato();
   montaMenu();
   montaRegua();
