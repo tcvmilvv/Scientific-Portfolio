@@ -240,7 +240,18 @@ main{ min-width: 0; padding: 0 var(--pad-x) 6rem; }
   column-gap: clamp(1.5rem, 4vw, 3rem);
   align-items: start;
 }
+.sobre-grid.com-foto{
+  grid-template-columns: minmax(auto, 220px) 1fr clamp(150px, 19vw, 230px);
+}
 .sobre-grid .secao-titulo{ margin: 0; }
+.sobre-foto{ margin: 0; }
+.sobre-foto[hidden]{ display: none; }
+.sobre-foto img{
+  display: block; width: 100%;
+  aspect-ratio: 4 / 5; object-fit: cover; object-position: center 20%;
+  border-radius: 6px;
+  background: var(--papel-alt);
+}
 .sobre-corpo{ display: flex; flex-direction: column; gap: 1.4rem; }
 
 .bio{
@@ -254,7 +265,8 @@ main{ min-width: 0; padding: 0 var(--pad-x) 6rem; }
 }
 
 @media (max-width: 700px){
-  .sobre-grid{ grid-template-columns: 1fr; row-gap: 1.2rem; }
+  .sobre-grid, .sobre-grid.com-foto{ grid-template-columns: 1fr; row-gap: 1.2rem; }
+  .sobre-foto{ max-width: 200px; }
 }
 
 /* Lattes/ORCID — now shown after the About me text */

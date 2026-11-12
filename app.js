@@ -83,6 +83,15 @@
 
   function montaSobre() {
     document.getElementById("bio").textContent = PERFIL.bio || "";
+    // Optional photo (PERFIL.foto = "img/foto.jpg"): adds a third column.
+    var fig = document.getElementById("sobre-foto");
+    if (PERFIL.foto && fig) {
+      var img = document.getElementById("sobre-foto-img");
+      img.src = PERFIL.foto;
+      img.alt = PERFIL.fotoAlt || ("Photo of " + (PERFIL.nome || ""));
+      fig.hidden = false;
+      fig.parentNode.classList.add("com-foto");
+    }
   }
 
   // ---------------- Scientific Illustration ----------------

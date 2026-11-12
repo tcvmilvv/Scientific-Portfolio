@@ -5,6 +5,7 @@ window.PERFIL = {
   "nomeCitacao": "C. A. Tavares",
   "saudacao": "Hello!",
   "introducao": "I'm",
+  "foto": "img/foto.png",
   "bio": "I am a computational chemist and postdoctoral researcher at UNICAMP, Brazil, specializing in molecular dynamics, computational biophysics, and biomolecular modeling. My research focuses on molecular interactions in complex biological systems, combining computational methods, scientific programming, and data visualization.",
   "resumo": "PhD Researcher in Computational Chemistry",
   "situacao": "Open to Postdoctoral Research Positions",

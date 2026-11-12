@@ -53,3 +53,7 @@ img/         → small icons used next to links (Lattes, ORCID, email, LinkedIn)
 ## Teaching section
 
 Edit `window.ENSINO` in `data/artigos.js` (one block per course/workshop). Only `titulo` is required; empty fields are hidden. Handouts go in `ensino/`. Remove the list to hide the section and its menu item.
+
+## About me photo
+
+Save a portrait (about 800x1000 px) as `img/foto.jpg` and set `"foto": "img/foto.jpg"` in `PERFIL` (optional `"fotoAlt"`). Without it the section keeps two columns.
